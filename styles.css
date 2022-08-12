@@ -1,0 +1,68 @@
+body {
+  background-color: #ED1D24;
+  font-family: 'Bangers', cursive;
+  padding-left: 2.5rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+/* TEXT COLOR */
+.txt {
+  color: #FFFFFF;
+  font-family: 'Bangers', cursive;
+}
+/* MARVEL BRAND */
+.title {
+
+}
+  /* TRIVIA TEXT COLOR/FORMATTING */
+
+.question-title {
+  font-size: 3rem;
+
+}
+
+.question {
+  font-size: 2.5rem;
+}
+
+
+.option {
+  background-color: #ED1D24;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-radius: 12px;
+  font-size: 2.5rem;
+}
+
+.option:hover {
+  font-size: 2.7rem;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* QUESTON FORMATTING */
+
+.first {
+  position: absolute;
+}
+
+
+.second {
+  position: absolute;
+  top: 25rem;
+}
+
+
+.third {
+  position: absolute;
+  right: 20rem;
+}
+
+.fourth {
+  position: absolute;
+  top: 25rem;
+  right: 20rem;
+}
