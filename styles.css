@@ -66,3 +66,13 @@ body {
   top: 25rem;
   right: 20rem;
 }
+
+.next {
+  position: absolute;
+  right: 15rem;
+  top: 35rem;
+}
+
+.pic {
+  width: 2%;
+}
