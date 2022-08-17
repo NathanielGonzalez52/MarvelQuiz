@@ -3,7 +3,7 @@
 // console.log(Math.floor(randNum*10)+1);
 //
 const Questions = [{
-		id: 0,
+		id: 1,
 		q: 'Which character said, "I never said you were a superhero"?',
 		a: [{ text: "Obediah Stane", isCorrect: false },
 			{ text: "Pepper Potts", isCorrect: false },
@@ -13,7 +13,7 @@ const Questions = [{
 
 	},
 	{
-		id: 1,
+		id: 2,
 		q: "What is the first song played in Iron Man?",
 		a: [{ text: "Highway to Hell", isCorrect: false},
 			{ text: "Welcome to the Jungle", isCorrect: false },
@@ -23,7 +23,7 @@ const Questions = [{
 
 	},
 	{
-		id: 2,
+		id: 3,
 		q: "What is Natasha's American alias in Iron Man 2?",
 		a: [{ text: "Natalie Romero", isCorrect: false },
 			{ text: "Natalie Rieman", isCorrect: false },
@@ -32,7 +32,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 3,
+		id: 4,
 		q: "What does S.H.I.E.L.D stand for?",
 		a: [{ text: "Strategic Home Intergral Enemy Line Division", isCorrect: false },
 			{ text: "Strategy Hill Interforce Evil Latent Evil ", isCorrect: false },
@@ -41,7 +41,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 4,
+		id: 5,
 		q: "Which movie is the Tessseract first seen on screen?",
 		a: [{ text: "Captain America The First Avenger", isCorrect: false },
 			{ text: "Thor", isCorrect: true },
@@ -50,7 +50,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 5,
+		id: 6,
 		q: "What is Pepper Potts allergic to?",
 		a: [{ text: "Apples", isCorrect: false },
 			{ text: "Cherries", isCorrect: false },
@@ -59,16 +59,16 @@ const Questions = [{
 		]
 	},
 	{
-		id: 6,
-		q: "What is Natasha's American alias in Iron Man 2?",
-		a: [{ text: "Natalie Romero", isCorrect: false },
-			{ text: "Natalie Rieman", isCorrect: false },
-			{ text: "Natalie Rushman", isCorrect: true },
-			{ text: "Natalie Roman", isCorrect: false }
+		id: 7,
+		q: "About how many universes did Doctor Strange see in Infinity War?",
+		a: [{ text: "10 Million", isCorrect: false },
+			{ text: "5 Million", isCorrect: false },
+			{ text: "14 Million", isCorrect: true },
+			{ text: "2 Million", isCorrect: false }
 		]
 	},
 	{
-		id: 7,
+		id: 8,
 		q: "In what movie does Stan Lee cameo as a bartender?",
 		a: [{ text: "Ant-Man", isCorrect: true },
 			{ text: "Spider-Man: Homecoming", isCorrect: false },
@@ -77,7 +77,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 8,
+		id: 9,
 		q: "What is the wifi password given to Doctor Strange?",
 		a: [{ text: "Shawarma", isCorrect: false },
 			{ text: "Shamblama", isCorrect: false },
@@ -86,7 +86,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 9,
+		id: 10,
 		q: "What song is playing when Peter arrives to the dance in Spider-Man: Homecoming?",
 		a: [{ text: "Space Age Love Song", isCorrect: true },
 			{ text: "Save it for Later", isCorrect: false },
@@ -95,7 +95,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 10,
+		id: 11,
 		q: "What Earth does Mysterio claim to be from in Spider-Man: Far From Home?",
 		a: [{ text: "Earth-616", isCorrect: false },
 			{ text: "Earth-232", isCorrect: false },
@@ -122,7 +122,7 @@ function iterate(id) {
 
 	// const question = document.getElementById("question");
 	// Setting question title TEXT
-	title.innerText = "Question " + Number(id+1);
+	title.innerText = "Question " + Number(id);
 	// Setting the question text
 	question.innerText = Questions[id].q;
 
@@ -190,7 +190,7 @@ function iterate(id) {
 		if (selected == "true") {
 			score += 1;
 		} else {
-			PASS
+			console.log("wrong");
 		}
 	})
 	// // Grabbing the evaluate button
@@ -209,7 +209,7 @@ function iterate(id) {
 }
 
 if (start) {
-	iterate("0");
+	iterate("1");
 }
 
 // Next button and method

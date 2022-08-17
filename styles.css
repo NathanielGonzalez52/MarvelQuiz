@@ -12,30 +12,33 @@ body {
   font-family: 'Bangers', cursive;
 }
 /* MARVEL BRAND */
-.title {
-
-}
   /* TRIVIA TEXT COLOR/FORMATTING */
 
 /* .question-title {
   font-size: 3rem;
 
 } */
+
+/* Declares question number */
 .question-title {
   padding-bottom: 1.5rem;
 }
+/* Div for the question */
 .question-container {
   padding-bottom: 2rem;
 }
-
+/* Style for title */
 #title {
   font-size: 3rem;
 }
-
+/* Style for question */
 #question {
   font-size:2.5rem;
 }
 
+/* BUTTONS  */
+
+/* Style for button */
 .option {
   background-color: #ED1D24;
   border-color: #FFFFFF;
@@ -43,16 +46,16 @@ body {
   border-radius: 12px;
   font-size: 2.5rem;
 }
-
+/* Hover effect for buttons */
 .option:hover {
   font-size: 2.7rem;
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
 }
 
-
-
-/* QUESTON FORMATTING */
+.btn {
+  /* margin: 5rem; */
+}
 
 .first {
   position: absolute;
@@ -73,7 +76,7 @@ body {
   position: absolute;
   right: 20rem;
   white-space: normal;
-  max-width: 20%;
+  max-width: 30%;
 }
 
 .fourth {
@@ -82,6 +85,7 @@ body {
   right: 20rem;
   white-space: normal;
   max-width: 20%;
+  /* margin-top:6.5rem; */
 }
 
 .next {
