@@ -1,51 +1,128 @@
-// // Questions will be asked
-// const Questions = [{
-// 		id: 0,
-// 		q: "What is Steve Roger's name?",
-// 		a: [{ text: "Steve Rogers", isCorrect: true },
-// 			{ text: "Clark Kent", isCorrect: false },
-// 			{ text: "Clint Barton", isCorrect: false },
-// 			{ text: "Tony Stark", isCorrect: false }
-// 		]
+// Questions will be asked
+var randNum = Math.random();
+console.log(Math.floor(randNum*10)+1);
 //
-// 	},
-// 	{
-// 		id: 1,
-// 		q: "What is the capital of Thailand?",
-// 		a: [{ text: "Lampang", isCorrect: false, isSelected: false },
-// 			{ text: "phuket", isCorrect: false },
-// 			{ text: "Ayutthaya", isCorrect: false },
-// 			{ text: "Bangkok", isCorrect: true }
-// 		]
-//
-// 	},
-// 	{
-// 		id: 2,
-// 		q: "What is the capital of Gujarat",
-// 		a: [{ text: "surat", isCorrect: false },
-// 			{ text: "vadodara", isCorrect: false },
-// 			{ text: "gandhinagar", isCorrect: true },
-// 			{ text: "rajkot", isCorrect: false }
-// 		]
-//
-// 	}
-//
-// ]
-//
+const Questions = [{
+		id: 0,
+		q: 'Which character said, "I never said you were a superhero"?',
+		a: [{ text: "Obediah Stane", isCorrect: true },
+			{ text: "Pepper Potts", isCorrect: false },
+			{ text: "Christine Everheart", isCorrect: false },
+			{ text: "Vicki Vale", isCorrect: false }
+		]
+
+	},
+	{
+		id: 1,
+		q: "What is the first song played in Iron Man?",
+		a: [{ text: "Highway to Hell", isCorrect: true},
+			{ text: "Welcome to the Jungle", isCorrect: false },
+			{ text: "Shoot to Thrill", isCorrect: false },
+			{ text: "Back in Black", isCorrect: false }
+		]
+
+	},
+	{
+		id: 2,
+		q: "What is Natasha's American alias in Iron Man 2?",
+		a: [{ text: "Natalie Romero", isCorrect: true },
+			{ text: "Natalie Rieman", isCorrect: false },
+			{ text: "Natalie Rushman", isCorrect: false },
+			{ text: "Natalie Roman", isCorrect: false }
+		]
+	},
+	{
+		id: 3,
+		q: "What does S.H.I.E.L.D stand for?",
+		a: [{ text: "Strategic Home Intergral Enemy Line Division", isCorrect: true },
+			{ text: "Strategy Hill Interforce Evil Latent Evil ", isCorrect: false },
+			{ text: "Strategic Homeland Intervention Enforcement and Logistics Division", isCorrect: false },
+			{ text: "None of these", isCorrect: false }
+		]
+	},
+	{
+		id: 4,
+		q: "Which movie is the Tessseract first seen on screen?",
+		a: [{ text: "Captain America The First Avenger", isCorrect: true },
+			{ text: "Thor", isCorrect: false },
+			{ text: "Thor: The Dark World", isCorrect: false },
+			{ text: "Iron Man 2", isCorrect: false }
+		]
+	},
+	{
+		id: 5,
+		q: "What is Pepper Potts allergic to?",
+		a: [{ text: "Apples", isCorrect: true },
+			{ text: "Cherries", isCorrect: false },
+			{ text: "Strawberries", isCorrect: false },
+			{ text: "Peaches", isCorrect: false }
+		]
+	},
+	{
+		id: 6,
+		q: "What is Natasha's American alias in Iron Man 2?",
+		a: [{ text: "Natalie Romero", isCorrect: true },
+			{ text: "Natalie Rieman", isCorrect: false },
+			{ text: "Natalie Rushman", isCorrect: false },
+			{ text: "Natalie Roman", isCorrect: false }
+		]
+	},
+	{
+		id: 7,
+		q: "In what movie does Stan Lee cameo as a bartender?",
+		a: [{ text: "Ant-Man", isCorrect: true },
+			{ text: "Spider-Man: Homecoming", isCorrect: false },
+			{ text: "Iron Man 3", isCorrect: false },
+			{ text: "Captain America: The First Avenger", isCorrect: false }
+		]
+	},
+	{
+		id: 8,
+		q: "What is the wifi password given to Doctor Strange?",
+		a: [{ text: "Shawarma", isCorrect: true },
+			{ text: "Shamblama", isCorrect: false },
+			{ text: "Shamballa", isCorrect: false },
+			{ text: "Shrine", isCorrect: false }
+		]
+	},
+	{
+		id: 9,
+		q: "What song is playing when Peter arrives to the dance in Spider-Man: Homecoming?",
+		a: [{ text: "Space Age Love Song", isCorrect: true },
+			{ text: "Save it for Later", isCorrect: false },
+			{ text: "Blitzkreig Bop", isCorrect: false },
+			{ text: "Ran So Far Away ", isCorrect: false }
+		]
+	},
+	{
+		id: 10,
+		q: "What Earth does Mysterio claim to be from in Spider-Man: Far From Home?",
+		a: [{ text: "Earth-616", isCorrect: true },
+			{ text: "Earth-232", isCorrect: false },
+			{ text: "Earth-69420", isCorrect: false },
+			{ text: "Earth-833", isCorrect: false }
+		]
+
+	}
+
+
+]
+// //
 // // Set start
 // var start = true;
-//
+// //
 // // Iterate
 // function iterate(id) {
-//
+// 	var score = 0;
 // 	// Getting the result display section
-// 	var result = document.getElementsByClassName("result");
-// 	result[0].innerText = "";
+// 	// var result = document.getElementsByClassName("result");
+// 	// result[0].innerText = "";
 //
 // 	// Getting the question
-// 	const question = document.getElementById("question");
 //
-//
+// 	// const question = document.getElementById("question");
+// 	// Setting question title TEXT
+// 	title.innerText = "Question " + Number(id+1);
 // 	// Setting the question text
 // 	question.innerText = Questions[id].q;
 //
@@ -72,53 +149,63 @@
 //
 // 	// Show selection for op1
 // 	op1.addEventListener("click", () => {
-// 		op1.style.backgroundColor = "lightgoldenrodyellow";
-// 		op2.style.backgroundColor = "lightskyblue";
-// 		op3.style.backgroundColor = "lightskyblue";
-// 		op4.style.backgroundColor = "lightskyblue";
+// 		op1.style.backgroundColor = "green";
+// 		op2.style.backgroundColor = "grey";
+// 		op3.style.backgroundColor = "grey";
+// 		op4.style.backgroundColor = "grey";
 // 		selected = op1.value;
 // 	})
 //
 // 	// Show selection for op2
 // 	op2.addEventListener("click", () => {
-// 		op1.style.backgroundColor = "lightskyblue";
-// 		op2.style.backgroundColor = "lightgoldenrodyellow";
-// 		op3.style.backgroundColor = "lightskyblue";
-// 		op4.style.backgroundColor = "lightskyblue";
+// 		op1.style.backgroundColor = "grey";
+// 		op2.style.backgroundColor = "green";
+// 		op3.style.backgroundColor = "grey";
+// 		op4.style.backgroundColor = "grey";
 // 		selected = op2.value;
 // 	})
 //
 // 	// Show selection for op3
 // 	op3.addEventListener("click", () => {
-// 		op1.style.backgroundColor = "lightskyblue";
-// 		op2.style.backgroundColor = "lightskyblue";
-// 		op3.style.backgroundColor = "lightgoldenrodyellow";
-// 		op4.style.backgroundColor = "lightskyblue";
+// 		op1.style.backgroundColor = "grey";
+// 		op2.style.backgroundColor = "grey";
+// 		op3.style.backgroundColor = "green";
+// 		op4.style.backgroundColor = "grey";
 // 		selected = op3.value;
 // 	})
 //
 // 	// Show selection for op4
 // 	op4.addEventListener("click", () => {
-// 		op1.style.backgroundColor = "lightskyblue";
-// 		op2.style.backgroundColor = "lightskyblue";
-// 		op3.style.backgroundColor = "lightskyblue";
-// 		op4.style.backgroundColor = "lightgoldenrodyellow";
+// 		op1.style.backgroundColor = "grey";
+// 		op2.style.backgroundColor = "grey";
+// 		op3.style.backgroundColor = "grey";
+// 		op4.style.backgroundColor = "green";
 // 		selected = op4.value;
 // 	})
-//
-// 	// Grabbing the evaluate button
-// 	const evaluate = document.getElementsByClassName("evaluate");
+// 	// Grabbing the next button
+// 	const next = document.getElementsByClassName("next");
 //
 // 	// Evaluate method
-// 	evaluate[0].addEventListener("click", () => {
+// 	next[0].addEventListener("click", () => {
 // 		if (selected == "true") {
-// 			result[0].innerHTML = "True";
-// 			result[0].style.color = "green";
+// 			score += 1;
 // 		} else {
-// 			result[0].innerHTML = "False";
-// 			result[0].style.color = "red";
+// 			PASS
 // 		}
 // 	})
+// 	// // Grabbing the evaluate button
+// 	// const evaluate = document.getElementsByClassName("evaluate");
+// 	//
+// 	// // Evaluate method
+// 	// evaluate[0].addEventListener("click", () => {
+// 	// 	if (selected == "true") {
+// 	// 		result[0].innerHTML = "True";
+// 	// 		result[0].style.color = "green";
+// 	// 	} else {
+// 	// 		result[0].innerHTML = "False";
+// 	// 		result[0].style.color = "red";
+// 	// 	}
+// 	// })
 // }
 //
 // if (start) {
