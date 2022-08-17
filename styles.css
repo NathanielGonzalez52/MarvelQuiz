@@ -90,6 +90,12 @@ body {
 
 .next {
   position: absolute;
-  right: 15rem;
+  right: 20rem;
+  top: 35rem;
+}
+
+.previous {
+  position: absolute;
+  left: 18rem;
   top: 35rem;
 }
