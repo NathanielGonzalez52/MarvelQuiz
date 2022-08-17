@@ -56,32 +56,36 @@ body {
 
 .first {
   position: absolute;
+  white-space: normal;
+  max-width: 20%;
 }
 
 
 .second {
   position: absolute;
   top: 25rem;
+  white-space: normal;
+  max-width: 20%;
 }
 
 
 .third {
   position: absolute;
   right: 20rem;
+  white-space: normal;
+  max-width: 20%;
 }
 
 .fourth {
   position: absolute;
   top: 25rem;
   right: 20rem;
+  white-space: normal;
+  max-width: 20%;
 }
 
 .next {
   position: absolute;
   right: 15rem;
   top: 35rem;
-}
-
-.pic {
-  width: 2%;
 }
