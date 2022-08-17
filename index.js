@@ -1,13 +1,13 @@
 // Questions will be asked
-var randNum = Math.random();
-console.log(Math.floor(randNum*10)+1);
+// var randNum = Math.random();
+// console.log(Math.floor(randNum*10)+1);
 //
 const Questions = [{
 		id: 0,
 		q: 'Which character said, "I never said you were a superhero"?',
-		a: [{ text: "Obediah Stane", isCorrect: true },
+		a: [{ text: "Obediah Stane", isCorrect: false },
 			{ text: "Pepper Potts", isCorrect: false },
-			{ text: "Christine Everheart", isCorrect: false },
+			{ text: "Christine Everheart", isCorrect: true },
 			{ text: "Vicki Vale", isCorrect: false }
 		]
 
@@ -15,36 +15,36 @@ const Questions = [{
 	{
 		id: 1,
 		q: "What is the first song played in Iron Man?",
-		a: [{ text: "Highway to Hell", isCorrect: true},
+		a: [{ text: "Highway to Hell", isCorrect: false},
 			{ text: "Welcome to the Jungle", isCorrect: false },
 			{ text: "Shoot to Thrill", isCorrect: false },
-			{ text: "Back in Black", isCorrect: false }
+			{ text: "Back in Black", isCorrect: true }
 		]
 
 	},
 	{
 		id: 2,
 		q: "What is Natasha's American alias in Iron Man 2?",
-		a: [{ text: "Natalie Romero", isCorrect: true },
+		a: [{ text: "Natalie Romero", isCorrect: false },
 			{ text: "Natalie Rieman", isCorrect: false },
-			{ text: "Natalie Rushman", isCorrect: false },
+			{ text: "Natalie Rushman", isCorrect: true },
 			{ text: "Natalie Roman", isCorrect: false }
 		]
 	},
 	{
 		id: 3,
 		q: "What does S.H.I.E.L.D stand for?",
-		a: [{ text: "Strategic Home Intergral Enemy Line Division", isCorrect: true },
+		a: [{ text: "Strategic Home Intergral Enemy Line Division", isCorrect: false },
 			{ text: "Strategy Hill Interforce Evil Latent Evil ", isCorrect: false },
-			{ text: "Strategic Homeland Intervention Enforcement and Logistics Division", isCorrect: false },
+			{ text: "Strategic Homeland Intervention Enforcement and Logistics Division", isCorrect: true },
 			{ text: "None of these", isCorrect: false }
 		]
 	},
 	{
 		id: 4,
 		q: "Which movie is the Tessseract first seen on screen?",
-		a: [{ text: "Captain America The First Avenger", isCorrect: true },
-			{ text: "Thor", isCorrect: false },
+		a: [{ text: "Captain America The First Avenger", isCorrect: false },
+			{ text: "Thor", isCorrect: true },
 			{ text: "Thor: The Dark World", isCorrect: false },
 			{ text: "Iron Man 2", isCorrect: false }
 		]
@@ -52,18 +52,18 @@ const Questions = [{
 	{
 		id: 5,
 		q: "What is Pepper Potts allergic to?",
-		a: [{ text: "Apples", isCorrect: true },
+		a: [{ text: "Apples", isCorrect: false },
 			{ text: "Cherries", isCorrect: false },
-			{ text: "Strawberries", isCorrect: false },
+			{ text: "Strawberries", isCorrect: true },
 			{ text: "Peaches", isCorrect: false }
 		]
 	},
 	{
 		id: 6,
 		q: "What is Natasha's American alias in Iron Man 2?",
-		a: [{ text: "Natalie Romero", isCorrect: true },
+		a: [{ text: "Natalie Romero", isCorrect: false },
 			{ text: "Natalie Rieman", isCorrect: false },
-			{ text: "Natalie Rushman", isCorrect: false },
+			{ text: "Natalie Rushman", isCorrect: true },
 			{ text: "Natalie Roman", isCorrect: false }
 		]
 	},
@@ -79,9 +79,9 @@ const Questions = [{
 	{
 		id: 8,
 		q: "What is the wifi password given to Doctor Strange?",
-		a: [{ text: "Shawarma", isCorrect: true },
+		a: [{ text: "Shawarma", isCorrect: false },
 			{ text: "Shamblama", isCorrect: false },
-			{ text: "Shamballa", isCorrect: false },
+			{ text: "Shamballa", isCorrect: true },
 			{ text: "Shrine", isCorrect: false }
 		]
 	},
@@ -97,10 +97,10 @@ const Questions = [{
 	{
 		id: 10,
 		q: "What Earth does Mysterio claim to be from in Spider-Man: Far From Home?",
-		a: [{ text: "Earth-616", isCorrect: true },
+		a: [{ text: "Earth-616", isCorrect: false },
 			{ text: "Earth-232", isCorrect: false },
 			{ text: "Earth-69420", isCorrect: false },
-			{ text: "Earth-833", isCorrect: false }
+			{ text: "Earth-833", isCorrect: true }
 		]
 
 	}
