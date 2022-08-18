@@ -2,6 +2,8 @@
 // var randNum = Math.random();
 // console.log(Math.floor(randNum*10)+1);
 //
+
+// console.log(randNum());
 const Questions = [{
 		id: 1,
 		q: 'Which character said, "I never said you were a superhero"?',
@@ -107,13 +109,22 @@ const Questions = [{
 
 
 ]
+
+// console.log(Questions.length)
 //
 // Set start
 var start = true;
 //
+
+
+
 // Iterate
 function iterate(id) {
-	var score = 0;
+	// gameStarted = true;
+	// if (gameStarted) {
+	//
+	// }
+	// var score = 0;
 	// Getting the result display section
 	// var result = document.getElementsByClassName("result");
 	// result[0].innerText = "";
@@ -122,7 +133,9 @@ function iterate(id) {
 
 	// const question = document.getElementById("question");
 	// Setting question title TEXT
-	title.innerText = "Question " + Number(id);
+
+
+	// title.innerText = "Question " + Number(question);
 	// Setting the question text
 	question.innerText = Questions[id].q;
 
@@ -182,17 +195,31 @@ function iterate(id) {
 		op4.style.backgroundColor = "green";
 		selected = op4.value;
 	})
-	// Grabbing the next button
-	const next = document.getElementsByClassName("next");
+	// // Grabbing the next button
+	// const next = document.getElementsByClassName("next");
+	//
+	// // Evaluate method
+	// next[0].addEventListener("click", () => {
+	// 	question++;
+	// 	if (selected == "true") {
+	// 		score += 1;
+	// 	} else {
+	// 		console.log("wrong");
+	// 	}
+	// })
 
-	// Evaluate method
-	next[0].addEventListener("click", () => {
-		if (selected == "true") {
-			score += 1;
-		} else {
-			console.log("wrong");
-		}
-	})
+	// PREVIOUS FUNCTION
+	// const previous = document.getElementsByClassName("previous")
+	//
+	// // Previous functionality
+	// previous[0].addEventListener("click", () => {
+	//
+	// 	title.innerText = "Question " + Number(id-1);
+	// 	// Setting the question text
+	// 	question.innerText = Questions[id-1].q;
+	// })
+
+
 	// // Grabbing the evaluate button
 	// const evaluate = document.getElementsByClassName("evaluate");
 	//
@@ -208,20 +235,34 @@ function iterate(id) {
 	// })
 }
 
+// RANDOMIZE QUESTIONS
+
+// Questions will be asked
+function randNum() {
+	var randValue = Math.random();
+	var randQues = Math.floor(randValue*10)+1;
+	return randQues;
+}
+
+
+
 if (start) {
-	iterate("1");
+	var id = 1;
+	title.innerText = "Question " + Number(id);
+	iterate(randNum().toString());
 }
 
 // Next button and method
 const next = document.getElementsByClassName('next')[0];
-var id = 0;
+var id = 1;
 
 next.addEventListener("click", () => {
 	start = false;
-	if (id < 10) {
+	if (id <= Questions.length -1) {
 		id++;
-		iterate(id);
-		console.log(id);
+		title.innerText = "Question " + Number(id);
+		iterate(randNum().toString());
+		// console.log(randNum());
 	}
 
 })
