@@ -1,11 +1,15 @@
-// Questions will be asked
-// var randNum = Math.random();
-// console.log(Math.floor(randNum*10)+1);
+// var x = 0;
+// while (x < 1000) {
+// 	var randNum = Math.random();
+// 	console.log(Math.floor(randNum * (11 + 1)));
+// 	x++;
+// }
 //
-
-// console.log(randNum());
+//
+// // console.log(randNum());
+// // Questions will be asked
 const Questions = [{
-		id: 1,
+		id: 0,
 		q: 'Which character said, "I never said you were a superhero"?',
 		a: [{ text: "Obediah Stane", isCorrect: false },
 			{ text: "Pepper Potts", isCorrect: false },
@@ -15,7 +19,7 @@ const Questions = [{
 
 	},
 	{
-		id: 2,
+		id: 1,
 		q: "What is the first song played in Iron Man?",
 		a: [{ text: "Highway to Hell", isCorrect: false},
 			{ text: "Welcome to the Jungle", isCorrect: false },
@@ -25,7 +29,7 @@ const Questions = [{
 
 	},
 	{
-		id: 3,
+		id: 2,
 		q: "What is Natasha's American alias in Iron Man 2?",
 		a: [{ text: "Natalie Romero", isCorrect: false },
 			{ text: "Natalie Rieman", isCorrect: false },
@@ -34,7 +38,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 4,
+		id: 3,
 		q: "What does S.H.I.E.L.D stand for?",
 		a: [{ text: "Strategic Home Intergral Enemy Line Division", isCorrect: false },
 			{ text: "Strategy Hill Interforce Evil Latent Evil ", isCorrect: false },
@@ -43,7 +47,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 5,
+		id: 4,
 		q: "Which movie is the Tessseract first seen on screen?",
 		a: [{ text: "Captain America The First Avenger", isCorrect: false },
 			{ text: "Thor", isCorrect: true },
@@ -52,7 +56,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 6,
+		id: 5,
 		q: "What is Pepper Potts allergic to?",
 		a: [{ text: "Apples", isCorrect: false },
 			{ text: "Cherries", isCorrect: false },
@@ -61,7 +65,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 7,
+		id: 6,
 		q: "About how many universes did Doctor Strange see in Infinity War?",
 		a: [{ text: "10 Million", isCorrect: false },
 			{ text: "5 Million", isCorrect: false },
@@ -70,7 +74,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 8,
+		id: 7,
 		q: "In what movie does Stan Lee cameo as a bartender?",
 		a: [{ text: "Ant-Man", isCorrect: true },
 			{ text: "Spider-Man: Homecoming", isCorrect: false },
@@ -79,7 +83,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 9,
+		id: 8,
 		q: "What is the wifi password given to Doctor Strange?",
 		a: [{ text: "Shawarma", isCorrect: false },
 			{ text: "Shamblama", isCorrect: false },
@@ -88,7 +92,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 10,
+		id: 9,
 		q: "What song is playing when Peter arrives to the dance in Spider-Man: Homecoming?",
 		a: [{ text: "Space Age Love Song", isCorrect: true },
 			{ text: "Save it for Later", isCorrect: false },
@@ -97,7 +101,7 @@ const Questions = [{
 		]
 	},
 	{
-		id: 11,
+		id: 10,
 		q: "What Earth does Mysterio claim to be from in Spider-Man: Far From Home?",
 		a: [{ text: "Earth-616", isCorrect: false },
 			{ text: "Earth-232", isCorrect: false },
@@ -240,29 +244,71 @@ function iterate(id) {
 // Questions will be asked
 function randNum() {
 	var randValue = Math.random();
-	var randQues = Math.floor(randValue*10)+1;
+	// Math.floor(randNum * (11 + 1))
+	var randQues = Math.floor(randValue * (10+1))
 	return randQues;
+	// if (nums.includes(randQues)) {
+	// 	console.log(randQues);
+	// 	console.log("Already used")
+	// 	nums.pop();
+	// 	console.log(nums);
+	// 	randNum()
+	// } else {
+	// 	nums.push(randQues)
+	// 	return randQues;
+	// }
+
 }
 
+const nums = [];
 
 
+// first random question
 if (start) {
 	var id = 1;
 	title.innerText = "Question " + Number(id);
-	iterate(randNum().toString());
+	var firstQuestion = randNum();
+	nums.push(firstQuestion);
+	iterate(firstQuestion.toString());
+	// console.log(nums);
 }
 
 // Next button and method
 const next = document.getElementsByClassName('next')[0];
 var id = 1;
 
+gameOn = true;
+
 next.addEventListener("click", () => {
 	start = false;
-	if (id <= Questions.length -1) {
+	if (id <= Questions.length-1) {
 		id++;
+		var nextQuestion = randNum();
+		// console.log(nextQuestion)
+		// while (id < 11) {
+		// 	var a = randNum();
+		// 	console.log(a);
+		// 	id++;
+		// }
+		while (nums.includes(nextQuestion)) {
+			// console.log(nextQuestion);
+				nextQuestion = randNum();
+				console.log("Yes, it's already been selected.");
+				console.log(nextQuestion);
+		}
+
+		nums.push(nextQuestion);
+		console.log(nums);
+		// console.log(nums)
 		title.innerText = "Question " + Number(id);
-		iterate(randNum().toString());
+			// nums.push
+		iterate(nextQuestion.toString());
+
+		// title.innerText = "Question " + Number(id);
+		// iterate(nextQuestion.toString());
 		// console.log(randNum());
 	}
 
 })
+
+// C:\Users\natha\OneDrive\desktop\MarvelQuiz\index.html
