@@ -8,6 +8,16 @@
 //
 // // console.log(randNum());
 // // Questions will be asked
+
+// question template
+
+// id: 11,
+// q: "?",
+// a: [{ text: "", isCorrect: false },
+// 	{ text: "", isCorrect: false },
+// 	{ text: "", isCorrect: false },
+// 	{ text: "", isCorrect: false }
+// ]
 const Questions = [{
 		id: 0,
 		q: 'Which character said, "I never said you were a superhero"?',
@@ -108,10 +118,70 @@ const Questions = [{
 			{ text: "Earth-69420", isCorrect: false },
 			{ text: "Earth-833", isCorrect: true }
 		]
-
+	},
+	{
+		id: 11,
+		q: "What is the name of Drax's wife?",
+		a: [{ text: "Kamaria", isCorrect: false },
+			{ text: "Ovette", isCorrect: true },
+			{ text: "Lyla", isCorrect: false },
+			{ text: "Lillian", isCorrect: false }
+		]
+	},
+	{
+		id: 12,
+		q: "What is the name of Drax's daughter?",
+		a: [{ text: "Kamaria", isCorrect: true },
+			{ text: "Ovette", isCorrect: false },
+			{ text: "Lyla", isCorrect: false },
+			{ text: "Lillian", isCorrect: false }
+		]
+	},
+	{
+		id: 13,
+		q: "In Infinity War, who is the last character that is dusted onscreen?",
+		a: [{ text: "Spider-Man", isCorrect: false },
+			{ text: "The Winter Soldier", isCorrect: false },
+			{ text: "Falcon", isCorrect: false },
+			{ text: "Nick Fury", isCorrect: false }
+		]
+	},
+	{
+		id: 14,
+		q: "What is the name of the dwarf that made the Infinity Gauntlet?",
+		a: [{ text: "Pip", isCorrect: false },
+			{ text: "Etrigan", isCorrect: false },
+			{ text: "Eitri", isCorrect: true },
+			{ text: "Polis", isCorrect: false }
+		]
+	},
+	{
+		id: 15,
+		q: "?",
+		a: [{ text: "Spider-Man", isCorrect: false },
+			{ text: "The Winter Soldier", isCorrect: false },
+			{ text: "Falcon", isCorrect: false },
+			{ text: "Nick Fury", isCorrect: false }
+		]
+	},
+	{
+		id: 16,
+		q: "In Spider-Man: Homecoming, what is the name of the destroyed ferry?",
+		a: [{ text: "Brooklyn Ferry", isCorrect: false },
+			{ text: "The Queens Ferry", isCorrect: false },
+			{ text: "The Staten Island Ferry", isCorrect: false },
+			{ text: "The New York Ferry", isCorrect: false }
+		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
 	}
-
-
 ]
 
 // console.log(Questions.length)
@@ -245,7 +315,7 @@ function iterate(id) {
 function randNum() {
 	var randValue = Math.random();
 	// Math.floor(randNum * (11 + 1))
-	var randQues = Math.floor(randValue * (10+1))
+	var randQues = Math.floor(randValue * (Questions.length))
 	return randQues;
 	// if (nums.includes(randQues)) {
 	// 	console.log(randQues);
