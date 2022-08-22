@@ -157,11 +157,11 @@ const Questions = [{
 	},
 	{
 		id: 15,
-		q: "?",
-		a: [{ text: "Spider-Man", isCorrect: false },
-			{ text: "The Winter Soldier", isCorrect: false },
-			{ text: "Falcon", isCorrect: false },
-			{ text: "Nick Fury", isCorrect: false }
+		q: "What is the name of the soldier that become Abomination?",
+		a: [{ text: "Emmet Blonsky", isCorrect: false },
+			{ text: "Emil Blonsky", isCorrect: true },
+			{ text: "Emilio Blonsky", isCorrect: false },
+			{ text: "Eugene Blonsky", isCorrect: false }
 		]
 	},
 	{
@@ -347,11 +347,20 @@ if (start) {
 const next = document.getElementsByClassName('next')[0];
 var id = 1;
 
-gameOn = true;
 
+var pClicked = false;
+var prevClicked = 0;
 next.addEventListener("click", () => {
+
 	start = false;
-	if (id <= Questions.length-1) {
+	if (prevClicked > 0) {
+		// title.innerText = "Question " + Number(nums.indexOf(id));
+		// iterate(nextQuestion.toString());
+		prevClicked--;
+		title.innerText = "Question " + Number(id-prevClicked);
+		iterate(nums[nums.length-(1+prevClicked)]);
+	}
+	else if (id <= 9) {
 		id++;
 		var nextQuestion = randNum();
 		// console.log(nextQuestion)
@@ -363,22 +372,56 @@ next.addEventListener("click", () => {
 		while (nums.includes(nextQuestion)) {
 			// console.log(nextQuestion);
 				nextQuestion = randNum();
-				console.log("Yes, it's already been selected.");
-				console.log(nextQuestion);
+				// console.log("Yes, it's already been selected.");
+				// console.log(nextQuestion);
 		}
 
 		nums.push(nextQuestion);
-		console.log(nums);
+		// console.log(nums);
 		// console.log(nums)
 		title.innerText = "Question " + Number(id);
 			// nums.push
 		iterate(nextQuestion.toString());
+		console.log(id);
 
+// var currQues = title.innerText = "Question " + Number(nums[-1])
+		// console.log(nums[nums.length-back]);
 		// title.innerText = "Question " + Number(id);
 		// iterate(nextQuestion.toString());
 		// console.log(randNum());
 	}
 
+})
+
+var currId = nums[nums.length-1];
+
+// FINDS PREVIOUS BUTTON
+const previous = document.getElementsByClassName('previous')[0];
+// ADD FUNCTIONALITY TO PREVIOUS BUTTON
+previous.addEventListener("click", () => {
+
+	prevClicked++;
+	var prevId = nums[nums.length-(1+prevClicked)];
+	// var currId = nums[nums.length-1];
+	if (id==1) {
+		previous.disabled = true;
+	}
+	else {
+		previous.disabled = false;
+
+	try {
+		console.log("Hello");
+		title.innerText = "Question " + Number(id-prevClicked);
+		iterate(nums[nums.length-(1+prevClicked)]);
+	}
+	catch(err) {
+		title.innerText = "Question " + Number(id);
+		iterate(currId);
+  	// console.log(err);
+	}
+}
+	// console.log(prevId);
+	console.log(id);
 })
 
 // C:\Users\natha\OneDrive\desktop\MarvelQuiz\index.html
