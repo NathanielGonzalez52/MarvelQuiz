@@ -275,6 +275,7 @@ var id = 1;
 var pClicked = false;
 var prevClicked = 0;
 next.addEventListener("click", () => {
+
 	start = false;
 	const op1 = document.getElementById('op1');
 	const op2 = document.getElementById('op2');
@@ -319,18 +320,22 @@ const previous = document.getElementsByClassName('previous')[0];
 // ADD FUNCTIONALITY TO PREVIOUS BUTTON
 previous.addEventListener("click", () => {
 
-	prevClicked++;
-	var prevId = nums[nums.length-(1+prevClicked)];
+	// prevClicked++;
+	// var prevId = nums[nums.length-(1+prevClicked)];
+	// var backWards = id-prevClicked;
 	// var currId = nums[nums.length-1];
-	if (id==1) {
+	if (id==1 || backWards<1) {
 		previous.disabled = true;
+
 	}
 	else {
 		previous.disabled = false;
+		prevClicked++;
+		var prevId = nums[nums.length-(1+prevClicked)];
+		var backWards = id-prevClicked;
 
 	try {
-		console.log("Hello");
-		title.innerText = "Question " + Number(id-prevClicked);
+		title.innerText = "Question " + Number(backWards);
 		iterate(nums[nums.length-(1+prevClicked)]);
 	}
 	catch(err) {
