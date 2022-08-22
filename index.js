@@ -307,7 +307,7 @@ next.addEventListener("click", () => {
 		title.innerText = "Question " + Number(id);
 
 		iterate(nextQuestion.toString());
-		console.log(id);
+		// console.log(id);
 	}
 
 
@@ -330,22 +330,31 @@ previous.addEventListener("click", () => {
 	}
 	else {
 		previous.disabled = false;
+		// prevClicked++;
+		// if (prevClicked > 0) {
+			// var prevId = nums[nums.length-(1+prevClicked)];
+			// var backWards = id-prevClicked;
+		// }
+	try {
 		prevClicked++;
 		var prevId = nums[nums.length-(1+prevClicked)];
 		var backWards = id-prevClicked;
-
-	try {
 		title.innerText = "Question " + Number(backWards);
 		iterate(nums[nums.length-(1+prevClicked)]);
+		console.log("try block");
 	}
 	catch(err) {
-		title.innerText = "Question " + Number(id);
+		// title.innerText = "Question " + Number(id);
+		prevClicked--;
+		title.innerText = "Question " + Number(1);
 		iterate(currId);
+		console.log("catch block");
+		// console.log(prevClicked);
   	// console.log(err);
 	}
 }
 	// console.log(prevId);
-	console.log(id);
+	// console.log(id);
 })
 
 // C:\Users\natha\OneDrive\desktop\MarvelQuiz\index.html
