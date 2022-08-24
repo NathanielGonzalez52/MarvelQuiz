@@ -269,13 +269,19 @@ if (start) {
 
 // Next button and method
 const next = document.getElementsByClassName('next')[0];
+const previous = document.getElementsByClassName('previous')[0];
+
+
 var id = 1;
 
 
 var pClicked = false;
 var prevClicked = 0;
-next.addEventListener("click", () => {
+previous.hidden = true;
 
+next.addEventListener("click", () => {
+	previous.disabled = false;
+	previous.hidden = false;
 	start = false;
 	const op1 = document.getElementById('op1');
 	const op2 = document.getElementById('op2');
@@ -316,7 +322,6 @@ next.addEventListener("click", () => {
 var currId = nums[nums.length-1];
 
 // FINDS PREVIOUS BUTTON
-const previous = document.getElementsByClassName('previous')[0];
 // ADD FUNCTIONALITY TO PREVIOUS BUTTON
 previous.addEventListener("click", () => {
 
@@ -326,7 +331,6 @@ previous.addEventListener("click", () => {
 	// var currId = nums[nums.length-1];
 	if (id==1 || backWards<1) {
 		previous.disabled = true;
-
 	}
 	else {
 		previous.disabled = false;
@@ -342,13 +346,19 @@ previous.addEventListener("click", () => {
 		title.innerText = "Question " + Number(backWards);
 		iterate(nums[nums.length-(1+prevClicked)]);
 		console.log("try block");
+		console.log(title.innerText);
+		if (title.innerText[9] == '1') {
+			previous.hidden = true;
+		}
 	}
 	catch(err) {
 		// title.innerText = "Question " + Number(id);
+		previous.hidden = true;
 		prevClicked--;
 		title.innerText = "Question " + Number(1);
 		iterate(currId);
 		console.log("catch block");
+		console.log("Catch Block: " + prevClicked);
 		// console.log(prevClicked);
   	// console.log(err);
 	}
