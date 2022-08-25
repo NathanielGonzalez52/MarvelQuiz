@@ -1,3 +1,5 @@
+var selected = "";
+const answers = [];
 const Questions = [{
 		id: 0,
 		q: 'Which character said, "I never said you were a superhero"?',
@@ -123,7 +125,7 @@ const Questions = [{
 		a: [{ text: "Spider-Man", isCorrect: false },
 			{ text: "The Winter Soldier", isCorrect: false },
 			{ text: "Falcon", isCorrect: false },
-			{ text: "Nick Fury", isCorrect: false }
+			{ text: "Nick Fury", isCorrect: true }
 		]
 	},
 	{
@@ -149,7 +151,7 @@ const Questions = [{
 		q: "In Spider-Man: Homecoming, what is the name of the destroyed ferry?",
 		a: [{ text: "Brooklyn Ferry", isCorrect: false },
 			{ text: "The Queens Ferry", isCorrect: false },
-			{ text: "The Staten Island Ferry", isCorrect: false },
+			{ text: "The Staten Island Ferry", isCorrect: true },
 			{ text: "The New York Ferry", isCorrect: false }
 		]
 	},
@@ -163,6 +165,56 @@ const Questions = [{
 		]
 	}
 ]
+
+function answerChoices(ques) {
+	const op1 = document.getElementById('op1');
+	const op2 = document.getElementById('op2');
+	const op3 = document.getElementById('op3');
+	const op4 = document.getElementById('op4');
+
+	// Providing the true or false value to the options
+	op1.value = Questions[ques].a[0].isCorrect;
+	op2.value = Questions[ques].a[1].isCorrect;
+	op3.value = Questions[ques].a[2].isCorrect;
+	op4.value = Questions[ques].a[3].isCorrect;
+
+	// Show selection for op1
+	op1.addEventListener("click", () => {
+		op1.style.backgroundColor = "green";
+		op2.style.backgroundColor = "grey";
+		op3.style.backgroundColor = "grey";
+		op4.style.backgroundColor = "grey";
+		selected = op1.value;
+	})
+
+	// Show selection for op2
+	op2.addEventListener("click", () => {
+		op1.style.backgroundColor = "grey";
+		op2.style.backgroundColor = "green";
+		op3.style.backgroundColor = "grey";
+		op4.style.backgroundColor = "grey";
+		selected = op2.value;
+	})
+
+	// Show selection for op3
+	op3.addEventListener("click", () => {
+		op1.style.backgroundColor = "grey";
+		op2.style.backgroundColor = "grey";
+		op3.style.backgroundColor = "green";
+		op4.style.backgroundColor = "grey";
+		selected = op3.value;
+	})
+
+	// Show selection for op4
+	op4.addEventListener("click", () => {
+		op1.style.backgroundColor = "grey";
+		op2.style.backgroundColor = "grey";
+		op3.style.backgroundColor = "grey";
+		op4.style.backgroundColor = "green";
+		selected = op4.value;
+	})
+	return selected;
+}
 
 // Set start
 var start = true;
@@ -190,7 +242,6 @@ function iterate(id) {
 	op3.value = Questions[id].a[2].isCorrect;
 	op4.value = Questions[id].a[3].isCorrect;
 
-	var selected = "";
 
 	// Show selection for op1
 	op1.addEventListener("click", () => {
@@ -243,6 +294,10 @@ function iterate(id) {
 	// })
 }
 
+// REVERSES STRING
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
 // RANDOMIZE QUESTIONS
 
 // Questions will be asked
@@ -264,6 +319,7 @@ if (start) {
 	var firstQuestion = randNum();
 	nums.push(firstQuestion);
 	iterate(firstQuestion.toString());
+	// answerChoices(firstQuestion.toString());
 	// console.log(nums);
 }
 
@@ -280,6 +336,10 @@ var prevClicked = 0;
 previous.hidden = true;
 
 next.addEventListener("click", () => {
+	answers.push(answerChoices(firstQuestion.toString()));
+	if (answerChoices(firstQuestion.toString()) == "") {
+		window.alert("Please select an answer.");
+	} else{
 	previous.disabled = false;
 	previous.hidden = false;
 	start = false;
@@ -299,6 +359,9 @@ next.addEventListener("click", () => {
 		prevClicked--;
 		title.innerText = "Question " + Number(id-prevClicked);
 		iterate(nums[nums.length-(1+prevClicked)]);
+		if (reverseString(title.innerText)[0] == '0') {
+			next.hidden = true;
+		}
 	}
 	else if (id <= 9) {
 		id++;
@@ -309,12 +372,17 @@ next.addEventListener("click", () => {
 		}
 
 		nums.push(nextQuestion);
-
 		title.innerText = "Question " + Number(id);
 
 		iterate(nextQuestion.toString());
+		// console.log("end");
+		if (reverseString(title.innerText)[0] == '0') {
+			next.hidden = true;
+		}
+
 		// console.log(id);
-	}
+
+	}}
 
 
 })
@@ -324,7 +392,7 @@ var currId = nums[nums.length-1];
 // FINDS PREVIOUS BUTTON
 // ADD FUNCTIONALITY TO PREVIOUS BUTTON
 previous.addEventListener("click", () => {
-
+	next.hidden = false;
 	// prevClicked++;
 	// var prevId = nums[nums.length-(1+prevClicked)];
 	// var backWards = id-prevClicked;
@@ -347,7 +415,7 @@ previous.addEventListener("click", () => {
 		iterate(nums[nums.length-(1+prevClicked)]);
 		console.log("try block");
 		console.log(title.innerText);
-		if (title.innerText[9] == '1') {
+		if (reverseString(title.innerText)[0] == '1') {
 			previous.hidden = true;
 		}
 	}
