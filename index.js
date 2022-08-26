@@ -167,6 +167,7 @@ const Questions = [{
 ]
 
 function answerChoices(ques) {
+	// console.log(ques);
 	const op1 = document.getElementById('op1');
 	const op2 = document.getElementById('op2');
 	const op3 = document.getElementById('op3');
@@ -336,13 +337,21 @@ var prevClicked = 0;
 previous.hidden = true;
 
 next.addEventListener("click", () => {
-	answers.push(answerChoices(firstQuestion.toString()));
-	if (answerChoices(firstQuestion.toString()) == "") {
-		window.alert("Please select an answer.");
-	} else{
+	if (start && selected != "") {
+		// answers.push(answerChoices(firstQuestion.toString()));
+		// console.log(answers);
+		// console.log(selected);
+		start = false;
+	}
+	// else if (selected == "") {
+	// 	window.alert("Please select an answer.");
+	// 	return ""
+	// }
+
+	answers.push(selected);
+	console.log(answers);
 	previous.disabled = false;
 	previous.hidden = false;
-	start = false;
 	const op1 = document.getElementById('op1');
 	const op2 = document.getElementById('op2');
 	const op3 = document.getElementById('op3');
@@ -354,37 +363,33 @@ next.addEventListener("click", () => {
 	op4.style.backgroundColor = "#ED1D24";
 
 	if (prevClicked > 0) {
-		// title.innerText = "Question " + Number(nums.indexOf(id));
-		// iterate(nextQuestion.toString());
+			// title.innerText = "Question " + Number(nums.indexOf(id));
+			// iterate(nextQuestion.toString());
 		prevClicked--;
 		title.innerText = "Question " + Number(id-prevClicked);
 		iterate(nums[nums.length-(1+prevClicked)]);
 		if (reverseString(title.innerText)[0] == '0') {
-			next.hidden = true;
+			// next.hidden = true;
+			next.value = "DONE";
 		}
 	}
-	else if (id <= 9) {
-		id++;
-		var nextQuestion = randNum();
+		else if (id <= 9) {
+			id++;
+			var nextQuestion = randNum();
 
-		while (nums.includes(nextQuestion)) {
-				nextQuestion = randNum();
+			while (nums.includes(nextQuestion)) {
+					nextQuestion = randNum();
+			}
+				nums.push(nextQuestion);
+				title.innerText = "Question " + Number(id);
+				iterate(nextQuestion.toString());
+				// console.log("end");
+				if (reverseString(title.innerText)[0] == '0') {
+					// next.hidden = true;
+					next.textContent = "SUBMIT";
 		}
-
-		nums.push(nextQuestion);
-		title.innerText = "Question " + Number(id);
-
-		iterate(nextQuestion.toString());
-		// console.log("end");
-		if (reverseString(title.innerText)[0] == '0') {
-			next.hidden = true;
-		}
-
-		// console.log(id);
-
-	}}
-
-
+	}
+	selected = "";
 })
 
 var currId = nums[nums.length-1];
@@ -413,8 +418,9 @@ previous.addEventListener("click", () => {
 		var backWards = id-prevClicked;
 		title.innerText = "Question " + Number(backWards);
 		iterate(nums[nums.length-(1+prevClicked)]);
-		console.log("try block");
-		console.log(title.innerText);
+		answers.pop()
+		// console.log("try block");
+		// console.log(title.innerText);
 		if (reverseString(title.innerText)[0] == '1') {
 			previous.hidden = true;
 		}
