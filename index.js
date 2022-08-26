@@ -343,10 +343,10 @@ next.addEventListener("click", () => {
 		// console.log(selected);
 		start = false;
 	}
-	// else if (selected == "") {
-	// 	window.alert("Please select an answer.");
-	// 	return ""
-	// }
+	else if (selected == "") {
+		window.alert("Please select an answer.");
+		return ""
+	}
 
 	answers.push(selected);
 	console.log(answers);
@@ -386,7 +386,7 @@ next.addEventListener("click", () => {
 				// console.log("end");
 				if (reverseString(title.innerText)[0] == '0') {
 					// next.hidden = true;
-					next.textContent = "SUBMIT";
+					next.textContent = "Submit";
 		}
 	}
 	selected = "";
