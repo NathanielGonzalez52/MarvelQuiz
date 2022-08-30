@@ -1,5 +1,17 @@
 var selected = "";
 const answers = [];
+function defaultColors () {
+	const op1 = document.getElementById('op1');
+	const op2 = document.getElementById('op2');
+	const op3 = document.getElementById('op3');
+	const op4 = document.getElementById('op4');
+
+	op1.style.backgroundColor = "#ED1D24";
+	op2.style.backgroundColor = "#ED1D24";
+	op3.style.backgroundColor = "#ED1D24";
+	op4.style.backgroundColor = "#ED1D24";
+}
+
 const Questions = [{
 		id: 0,
 		q: 'Which character said, "I never said you were a superhero"?',
@@ -327,7 +339,8 @@ if (start) {
 // Next button and method
 const next = document.getElementsByClassName('next')[0];
 const previous = document.getElementsByClassName('previous')[0];
-
+const submit = document.getElementsByClassName('submit')[0];
+submit.hidden = true;
 
 var id = 1;
 
@@ -352,15 +365,7 @@ next.addEventListener("click", () => {
 	console.log(answers);
 	previous.disabled = false;
 	previous.hidden = false;
-	const op1 = document.getElementById('op1');
-	const op2 = document.getElementById('op2');
-	const op3 = document.getElementById('op3');
-	const op4 = document.getElementById('op4');
-
-	op1.style.backgroundColor = "#ED1D24";
-	op2.style.backgroundColor = "#ED1D24";
-	op3.style.backgroundColor = "#ED1D24";
-	op4.style.backgroundColor = "#ED1D24";
+	defaultColors();
 
 	if (prevClicked > 0) {
 			// title.innerText = "Question " + Number(nums.indexOf(id));
@@ -369,8 +374,9 @@ next.addEventListener("click", () => {
 		title.innerText = "Question " + Number(id-prevClicked);
 		iterate(nums[nums.length-(1+prevClicked)]);
 		if (reverseString(title.innerText)[0] == '0') {
-			// next.hidden = true;
-			next.value = "DONE";
+			next.hidden = true;
+			submit.hidden = false;
+			// next.value = "DONE";
 		}
 	}
 		else if (id <= 9) {
@@ -385,8 +391,9 @@ next.addEventListener("click", () => {
 				iterate(nextQuestion.toString());
 				// console.log("end");
 				if (reverseString(title.innerText)[0] == '0') {
-					// next.hidden = true;
-					next.textContent = "Submit";
+					next.hidden = true;
+					submit.hidden = false;
+					// next.textContent = "Submit";
 		}
 	}
 	selected = "";
@@ -397,7 +404,9 @@ var currId = nums[nums.length-1];
 // FINDS PREVIOUS BUTTON
 // ADD FUNCTIONALITY TO PREVIOUS BUTTON
 previous.addEventListener("click", () => {
+	defaultColors();
 	next.hidden = false;
+	submit.hidden = true;
 	// prevClicked++;
 	// var prevId = nums[nums.length-(1+prevClicked)];
 	// var backWards = id-prevClicked;
@@ -439,6 +448,20 @@ previous.addEventListener("click", () => {
 }
 	// console.log(prevId);
 	// console.log(id);
+})
+
+submit.addEventListener("click", () => {
+	if (selected == "") {
+		submit.removeAttribute("href")
+
+		window.alert("Please select an answer.");
+		console.log(answers);
+	}
+
+	else {
+		submit.href = "submit.html";
+		console.log(answers);
+	}
 })
 
 // C:\Users\natha\OneDrive\desktop\MarvelQuiz\index.html
