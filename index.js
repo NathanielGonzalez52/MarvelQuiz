@@ -1,5 +1,6 @@
 var selected = "";
 const answers = [];
+const option = [];
 function defaultColors () {
 	const op1 = document.getElementById('op1');
 	const op2 = document.getElementById('op2');
@@ -263,6 +264,7 @@ function iterate(id) {
 		op3.style.backgroundColor = "grey";
 		op4.style.backgroundColor = "grey";
 		selected = op1.value;
+		picked = "op1";
 	})
 
 	// Show selection for op2
@@ -272,6 +274,7 @@ function iterate(id) {
 		op3.style.backgroundColor = "grey";
 		op4.style.backgroundColor = "grey";
 		selected = op2.value;
+		picked = "op2";
 	})
 
 	// Show selection for op3
@@ -281,6 +284,7 @@ function iterate(id) {
 		op3.style.backgroundColor = "green";
 		op4.style.backgroundColor = "grey";
 		selected = op3.value;
+		picked = "op3";
 	})
 
 	// Show selection for op4
@@ -290,6 +294,7 @@ function iterate(id) {
 		op3.style.backgroundColor = "grey";
 		op4.style.backgroundColor = "green";
 		selected = op4.value;
+		picked = "op4";
 	})
 
 	// // Grabbing the evaluate button
@@ -351,18 +356,16 @@ previous.hidden = true;
 
 next.addEventListener("click", () => {
 	if (start && selected != "") {
-		// answers.push(answerChoices(firstQuestion.toString()));
-		// console.log(answers);
-		// console.log(selected);
 		start = false;
 	}
 	else if (selected == "") {
 		window.alert("Please select an answer.");
 		return ""
 	}
-
+	option.push(picked);
 	answers.push(selected);
 	console.log(answers);
+	console.log(option);
 	previous.disabled = false;
 	previous.hidden = false;
 	defaultColors();
@@ -427,7 +430,8 @@ previous.addEventListener("click", () => {
 		var backWards = id-prevClicked;
 		title.innerText = "Question " + Number(backWards);
 		iterate(nums[nums.length-(1+prevClicked)]);
-		answers.pop()
+		answers.pop();
+		option.pop();
 		// console.log("try block");
 		// console.log(title.innerText);
 		if (reverseString(title.innerText)[0] == '1') {
@@ -452,6 +456,7 @@ previous.addEventListener("click", () => {
 
 var choices = "";
 var questions = "";
+var options = "";
 submit.addEventListener("click", () => {
 	if (selected == "") {
 		submit.removeAttribute("href")
@@ -468,12 +473,18 @@ submit.addEventListener("click", () => {
 		for (i=0; i<nums.length; i++) {
 			questions += nums[i]+ " ";
 		}
+		for (i=0; i<option.length; i++) {
+			options += option[i]+ " ";
+		}
 		console.log(choices);
 		console.log(questions);
+		console.log(options);
 		localStorage.setItem("playerChoices", choices);
-		localStorage.setItem("quizQuestions", questions)
+		localStorage.setItem("quizQuestions", questions);
+		localStorage.setItem("optionsPicked", options);
 
-		submit.href = "submit.html";
+		// submit.href = "submit.html";
+
 	}
 })
 

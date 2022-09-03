@@ -4,19 +4,44 @@
 
 var userAnswers = localStorage.getItem("playerChoices");
 var questions = localStorage.getItem("quizQuestions");
+var options = localStorage.getItem("optionsPicked");
 
+var answers = userAnswers.split(" ");
+var quizQuestions = questions.split(" ");
+var picked = options.split(" ");
 
-var answers = userAnswers.split(" ")
-var quizQuestions = questions.split(" ")
-
+function optionChosen(x) {
+	var first = false;
+	var second = false;
+	var third = false;
+	var fourth = false;
+	if (picked[x] == "op1") {
+		first = true;
+		return "first";
+	}
+	if (picked[x] == "op2") {
+		second = true;
+		return "second";
+	}
+	if (picked[x] == "op3") {
+		third = true;
+		return "third";
+	}
+	if (picked[x] == "op4") {
+		fourth = true;
+		return "fourth";
+	}
+}
 
 var score = 0;
 // gets rid of empty space at the end of the string
 answers.pop();
 quizQuestions.pop();
+picked.pop();
 
 console.log(answers);
 console.log(quizQuestions);
+console.log(picked);
 
 
 const Questions = [{
@@ -216,11 +241,9 @@ for (i=0; i<10; i++) {
 	var op3 = document.getElementsByClassName("btn" + String((button+2)));
 	var op4 = document.getElementsByClassName("btn" + String((button+3)));
 
-
-
 	var questionOne = document.getElementsByClassName("question-title" + String(i+1));
-	console.log(i);
-	console.log(questionOne);
+	// console.log(i);
+	// console.log(questionOne);
 	questionOne[0].innerText = Questions[quizQuestions[i]].q;
 
 	op1[0].innerText = Questions[quizQuestions[i]].a[0].text;
@@ -232,6 +255,67 @@ for (i=0; i<10; i++) {
 	op2[0].value = Questions[quizQuestions[i]].a[1].isCorrect;
 	op3[0].value = Questions[quizQuestions[i]].a[2].isCorrect;
 	op4[0].value = Questions[quizQuestions[i]].a[3].isCorrect;
+
+	if (op1[0].value == "true") {
+	    op1[0].style.backgroundColor = "green";
+	    if (answers[i] != op1[0].value) {
+				if (optionChosen(i)  == "second") {
+					op2[0].style.backgroundColor = "blue";
+				}
+				if (optionChosen(i)  == "third") {
+					op3[0].style.backgroundColor = "blue";
+				}
+				if (optionChosen(i)  == "fourth") {
+					op4[0].style.backgroundColor = "blue";
+				}
+			}
+	  }
+	if (op2[0].value == "true") {
+	   op2[0].style.backgroundColor = "green";
+		 if (answers[i] != op2[0].value) {
+			 if (optionChosen(i)  == "first") {
+				 op1[0].style.backgroundColor = "blue";
+			 }
+			 if (optionChosen(i)  == "third") {
+				 op3[0].style.backgroundColor = "blue";
+			 }
+			 if (optionChosen(i)  == "fourth") {
+				 op4[0].style.backgroundColor = "blue";
+			 }
+		 }
+	  }
+	if (op3[0].value == "true") {
+	   op3[0].style.backgroundColor = "green";
+		 if (answers[i] != op3[0].value) {
+			 if (optionChosen(i)  == "first") {
+				 op1[0].style.backgroundColor = "blue";
+			 }
+			 if (optionChosen(i)  == "second") {
+				 op2[0].style.backgroundColor = "blue";
+			 }
+			 if (optionChosen(i)  == "fourth") {
+				 op4[0].style.backgroundColor = "blue";
+			 }
+		 }
+
+	  }
+	if (op4[0].value == "true") {
+	   op4[0].style.backgroundColor = "green";
+		 if (answers[i] != op1[0].value) {
+			 if (optionChosen(i)  == "first") {
+				 op1[0].style.backgroundColor = "blue";
+			 }
+			 if (optionChosen(i)  == "second") {
+				 op2[0].style.backgroundColor = "blue";
+			 }
+			 if (optionChosen(i)  == "third") {
+				 op3[0].style.backgroundColor = "blue";
+			 }
+		 }
+
+	  }
+
+
 
 	button+=3;
 
