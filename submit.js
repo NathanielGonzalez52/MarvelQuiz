@@ -209,25 +209,6 @@ const Questions = [{
 		]
 	}
 ]
-//
-// const op1 = document.getElementsByClassName("btn1");
-// const op2 = document.getElementsByClassName("btn2");
-// const op3 = document.getElementsByClassName("btn3");
-// const op4 = document.getElementsByClassName("btn4");
-//
-// var questionOne = document.getElementsByClassName("question-title1");
-//
-// questionOne[0].innerText = Questions[quizQuestions[0]].q;
-//
-// op1[0].innerText = Questions[quizQuestions[0]].a[0].text;
-// op2[0].innerText = Questions[quizQuestions[0]].a[1].text;
-// op3[0].innerText = Questions[quizQuestions[0]].a[2].text;
-// op4[0].innerText = Questions[quizQuestions[0]].a[3].text;
-//
-// op1[0].value = Questions[quizQuestions[0]].a[0].isCorrect;
-// op2[0].value = Questions[quizQuestions[0]].a[1].isCorrect;
-// op3[0].value = Questions[quizQuestions[0]].a[2].isCorrect;
-// op4[0].value = Questions[quizQuestions[0]].a[3].isCorrect;
 
 // MAKE IT A VARIABLE
 var button = 0;
