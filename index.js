@@ -450,17 +450,30 @@ previous.addEventListener("click", () => {
 	// console.log(id);
 })
 
+var choices = "";
+var questions = "";
 submit.addEventListener("click", () => {
 	if (selected == "") {
 		submit.removeAttribute("href")
 
 		window.alert("Please select an answer.");
-		console.log(answers);
 	}
 
 	else {
-		submit.href = "submit.html";
+		answers.push(selected);
 		console.log(answers);
+		for (i=0; i<answers.length; i++) {
+			choices += answers[i]+ " ";
+		}
+		for (i=0; i<nums.length; i++) {
+			questions += nums[i]+ " ";
+		}
+		console.log(choices);
+		console.log(questions);
+		localStorage.setItem("playerChoices", choices);
+		localStorage.setItem("quizQuestions", questions)
+
+		submit.href = "submit.html";
 	}
 })
 

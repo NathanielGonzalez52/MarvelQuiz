@@ -90,7 +90,7 @@ body {
 
 .next {
   position: absolute;
-  right: 20rem;
+  right: 25rem;
   top: 35rem;
 }
 
@@ -98,4 +98,22 @@ body {
   position: absolute;
   left: 18rem;
   top: 35rem;
+}
+
+.submit {
+  background-color: #ED1D24;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-radius: 12px;
+  position: absolute;
+  left: 38rem;
+  top: 40rem;
+  font-size: 3.5rem;
+  text-decoration: none;
+}
+
+.submit:hover {
+  font-size: 3.7rem;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
 }

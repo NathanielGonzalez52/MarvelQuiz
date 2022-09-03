@@ -1,0 +1,25 @@
+body {
+  background-color: #ED1D24;
+  font-family: 'Bangers', cursive;
+  padding-left: 2.5rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+h2 {
+  color: #FFFFFF;
+  font-family: 'Bangers', cursive;
+}
+
+.txt {
+  color: #FFFFFF;
+  font-family: 'Bangers', cursive;
+}
+
+.option {
+  background-color: #ED1D24;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
