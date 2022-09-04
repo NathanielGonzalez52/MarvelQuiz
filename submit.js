@@ -1,14 +1,23 @@
 // import {answers} from "index.js";
 // console.log(answers);
 // localStorage.setItem("alter", "Clark Kent");
-
+ var score = 0;
 var userAnswers = localStorage.getItem("playerChoices");
 var questions = localStorage.getItem("quizQuestions");
 var options = localStorage.getItem("optionsPicked");
+var key = localStorage.getItem("key");
 
 var answers = userAnswers.split(" ");
 var quizQuestions = questions.split(" ");
 var picked = options.split(" ");
+var correctAnswer = key.split(" ");
+
+for (x=0;x<correctAnswer.length; x++) {
+	if (answers[x] == correctAnswer[x]) {
+		score++;
+		console.log(score);
+	}
+}
 
 function optionChosen(x) {
 	var first = false;
@@ -32,8 +41,6 @@ function optionChosen(x) {
 		return "fourth";
 	}
 }
-
-var score = 0;
 // gets rid of empty space at the end of the string
 answers.pop();
 quizQuestions.pop();
@@ -42,6 +49,7 @@ picked.pop();
 console.log(answers);
 console.log(quizQuestions);
 console.log(picked);
+var score = 0;
 
 
 const Questions = [{
@@ -213,7 +221,7 @@ const Questions = [{
 // MAKE IT A VARIABLE
 var button = 0;
 
-for (i=0; i<10; i++) {
+for (i=0; i<quizQuestions.length; i++) {
 
 	button++;
 
@@ -223,8 +231,7 @@ for (i=0; i<10; i++) {
 	var op4 = document.getElementsByClassName("btn" + String((button+3)));
 
 	var questionOne = document.getElementsByClassName("question-title" + String(i+1));
-	// console.log(i);
-	// console.log(questionOne);
+
 	questionOne[0].innerText = Questions[quizQuestions[i]].q;
 
 	op1[0].innerText = Questions[quizQuestions[i]].a[0].text;
@@ -249,6 +256,10 @@ for (i=0; i<10; i++) {
 				if (optionChosen(i)  == "fourth") {
 					op4[0].style.backgroundColor = "blue";
 				}
+
+			}
+			else {
+
 			}
 	  }
 	if (op2[0].value == "true") {
@@ -264,6 +275,9 @@ for (i=0; i<10; i++) {
 				 op4[0].style.backgroundColor = "blue";
 			 }
 		 }
+		 else {
+
+		 }
 	  }
 	if (op3[0].value == "true") {
 	   op3[0].style.backgroundColor = "green";
@@ -278,7 +292,9 @@ for (i=0; i<10; i++) {
 				 op4[0].style.backgroundColor = "blue";
 			 }
 		 }
+		 else {
 
+		 }
 	  }
 	if (op4[0].value == "true") {
 	   op4[0].style.backgroundColor = "green";
@@ -293,51 +309,20 @@ for (i=0; i<10; i++) {
 				 op3[0].style.backgroundColor = "blue";
 			 }
 		 }
+		 else {
 
+		 }
 	  }
-
-
-
 	button+=3;
-
+	// console.log("hello");
 }
 
-// function iterate(id) {
-//   var correctAnswer = "";
-// 	// Providing option text
-// 	op1[0].innerText = Questions[id].a[0].text;
-// 	op2[0].innerText = Questions[id].a[1].text;
-// 	op3[0].innerText = Questions[id].a[2].text;
-// 	op4[0].innerText = Questions[id].a[3].text;
-//
-// 	// Providing the true or false value to the options
-// 	op1[0].value = Questions[id].a[0].isCorrect;
-// 	op2[0].value = Questions[id].a[1].isCorrect;
-// 	op3[0].value = Questions[id].a[2].isCorrect;
-// 	op4[0].value = Questions[id].a[3].isCorrect;
-//
-//   if (op1[0].value == "true") {
-//     op1[0].style.backgroundColor = "green";
-//     correctAnswer = op1[0].value
-//   }
-//   if (op2[0].value == "true") {
-//     op2[0].style.backgroundColor = "green";
-//     correctAnswer = op2[0].value
-//   }
-//   if (op3[0].value == "true") {
-//     op3[0].style.backgroundColor = "green";
-//     correctAnswer = op3[0].value
-//   }
-//   if (op4[0].value == "true") {
-//     op4[0].style.backgroundColor = "green";
-//     correctAnswer = op4[0].value
-//   }
-//
-//   if (answers.indexOf(quizQuestions[id]) == correctAnswer) {
-//     console.log("Yes, they got it right.")
-//     score++;
-//   }
-//   console.log(score);
-//
-// }
-//
+for (x=0; x<answers.length; x++) {
+	if (answers[x] == "true") {
+		score++;
+	}
+}
+// console.log(score);
+
+var message = document.getElementsByClassName("playerMessage")[0];
+message.innerText = "Excelsior! You got " + score + " correct!";

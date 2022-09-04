@@ -1,6 +1,9 @@
 var selected = "";
+var correctAnswer = "";
 const answers = [];
 const option = [];
+const key = [];
+
 function defaultColors () {
 	const op1 = document.getElementById('op1');
 	const op2 = document.getElementById('op2');
@@ -8,9 +11,76 @@ function defaultColors () {
 	const op4 = document.getElementById('op4');
 
 	op1.style.backgroundColor = "#ED1D24";
+	op1.style.color = "#FFFFFF";
 	op2.style.backgroundColor = "#ED1D24";
+	op2.style.color = "#FFFFFF";
 	op3.style.backgroundColor = "#ED1D24";
+	op3.style.color = "#FFFFFF";
 	op4.style.backgroundColor = "#ED1D24";
+	op4.style.color = "#FFFFFF";
+}
+
+function clickedOn (x) {
+	const op1 = document.getElementById('op1');
+	const op2 = document.getElementById('op2');
+	const op3 = document.getElementById('op3');
+	const op4 = document.getElementById('op4');
+
+	x.style.backgroundColor = "#CC0000";
+	x.style.color = "#D3AF37";
+	if (x == op1) {
+		op2.style.backgroundColor = "grey";
+		op2.style.color = "#FFFFFF";
+		op3.style.backgroundColor = "grey";
+		op3.style.color = "#FFFFFF";
+		op4.style.backgroundColor = "grey";
+		op4.style.color = "#FFFFFF";
+	}
+
+	if (x == op2) {
+		op1.style.backgroundColor = "grey";
+		op1.style.color = "#FFFFFF";
+		op3.style.backgroundColor = "grey";
+		op3.style.color = "#FFFFFF";
+		op4.style.backgroundColor = "grey";
+		op4.style.color = "#FFFFFF";
+	}
+	if (x == op3) {
+		op1.style.backgroundColor = "grey";
+		op1.style.color = "#FFFFFF";
+		op2.style.backgroundColor = "grey";
+		op2.style.color = "#FFFFFF";
+		op4.style.backgroundColor = "grey";
+		op4.style.color = "#FFFFFF";
+	}
+	if (x == op4) {
+		op1.style.backgroundColor = "grey";
+		op1.style.color = "#FFFFFF";
+		op2.style.backgroundColor = "grey";
+		op2.style.color = "#FFFFFF";
+		op3.style.backgroundColor = "grey";
+		op3.style.color = "#FFFFFF";
+	}
+}
+
+function isCorrect() {
+	const op1 = document.getElementById('op1');
+	const op2 = document.getElementById('op2');
+	const op3 = document.getElementById('op3');
+	const op4 = document.getElementById('op4');
+
+	if (op1.value == "true") {
+		return op1.value;
+	}
+	if (op2.value == "true") {
+		return op2.value;
+	}
+	if (op3.value == "true") {
+		return op3.value;
+	}
+	if (op4.value == "true") {
+		return op4.value;
+	}
 }
 
 const Questions = [{
@@ -179,56 +249,56 @@ const Questions = [{
 	}
 ]
 
-function answerChoices(ques) {
-	// console.log(ques);
-	const op1 = document.getElementById('op1');
-	const op2 = document.getElementById('op2');
-	const op3 = document.getElementById('op3');
-	const op4 = document.getElementById('op4');
-
-	// Providing the true or false value to the options
-	op1.value = Questions[ques].a[0].isCorrect;
-	op2.value = Questions[ques].a[1].isCorrect;
-	op3.value = Questions[ques].a[2].isCorrect;
-	op4.value = Questions[ques].a[3].isCorrect;
-
-	// Show selection for op1
-	op1.addEventListener("click", () => {
-		op1.style.backgroundColor = "green";
-		op2.style.backgroundColor = "grey";
-		op3.style.backgroundColor = "grey";
-		op4.style.backgroundColor = "grey";
-		selected = op1.value;
-	})
-
-	// Show selection for op2
-	op2.addEventListener("click", () => {
-		op1.style.backgroundColor = "grey";
-		op2.style.backgroundColor = "green";
-		op3.style.backgroundColor = "grey";
-		op4.style.backgroundColor = "grey";
-		selected = op2.value;
-	})
-
-	// Show selection for op3
-	op3.addEventListener("click", () => {
-		op1.style.backgroundColor = "grey";
-		op2.style.backgroundColor = "grey";
-		op3.style.backgroundColor = "green";
-		op4.style.backgroundColor = "grey";
-		selected = op3.value;
-	})
-
-	// Show selection for op4
-	op4.addEventListener("click", () => {
-		op1.style.backgroundColor = "grey";
-		op2.style.backgroundColor = "grey";
-		op3.style.backgroundColor = "grey";
-		op4.style.backgroundColor = "green";
-		selected = op4.value;
-	})
-	return selected;
-}
+// function answerChoices(ques) {
+// 	// console.log(ques);
+// 	const op1 = document.getElementById('op1');
+// 	const op2 = document.getElementById('op2');
+// 	const op3 = document.getElementById('op3');
+// 	const op4 = document.getElementById('op4');
+//
+// 	// Providing the true or false value to the options
+// 	op1.value = Questions[ques].a[0].isCorrect;
+// 	op2.value = Questions[ques].a[1].isCorrect;
+// 	op3.value = Questions[ques].a[2].isCorrect;
+// 	op4.value = Questions[ques].a[3].isCorrect;
+//
+// 	// Show selection for op1
+// 	op1.addEventListener("click", () => {
+// 		op1.style.backgroundColor = "green";
+// 		op2.style.backgroundColor = "grey";
+// 		op3.style.backgroundColor = "grey";
+// 		op4.style.backgroundColor = "grey";
+// 		selected = op1.value;
+// 	})
+//
+// 	// Show selection for op2
+// 	op2.addEventListener("click", () => {
+// 		op1.style.backgroundColor = "grey";
+// 		op2.style.backgroundColor = "green";
+// 		op3.style.backgroundColor = "grey";
+// 		op4.style.backgroundColor = "grey";
+// 		selected = op2.value;
+// 	})
+//
+// 	// Show selection for op3
+// 	op3.addEventListener("click", () => {
+// 		op1.style.backgroundColor = "grey";
+// 		op2.style.backgroundColor = "grey";
+// 		op3.style.backgroundColor = "green";
+// 		op4.style.backgroundColor = "grey";
+// 		selected = op3.value;
+// 	})
+//
+// 	// Show selection for op4
+// 	op4.addEventListener("click", () => {
+// 		op1.style.backgroundColor = "grey";
+// 		op2.style.backgroundColor = "grey";
+// 		op3.style.backgroundColor = "grey";
+// 		op4.style.backgroundColor = "green";
+// 		selected = op4.value;
+// 	})
+// 	return selected;
+// }
 
 // Set start
 var start = true;
@@ -259,42 +329,58 @@ function iterate(id) {
 
 	// Show selection for op1
 	op1.addEventListener("click", () => {
-		op1.style.backgroundColor = "green";
-		op2.style.backgroundColor = "grey";
-		op3.style.backgroundColor = "grey";
-		op4.style.backgroundColor = "grey";
+		// op1.style.backgroundColor = "#D3AF37";
+		// op1.style.color = "#ED1D24";
+		clickedOn(op1);
+		// op2.style.backgroundColor = "grey";
+		// op2.style.color = "#FFFFFF";
+		// op3.style.backgroundColor = "grey";
+		// op3.style.color = "#FFFFFF";
+		// op4.style.backgroundColor = "grey";
+		// op4.style.backgroundColor = "#FFFFFF";
 		selected = op1.value;
 		picked = "op1";
+		correctAnswer = op1.value;
 	})
 
 	// Show selection for op2
 	op2.addEventListener("click", () => {
-		op1.style.backgroundColor = "grey";
-		op2.style.backgroundColor = "green";
-		op3.style.backgroundColor = "grey";
-		op4.style.backgroundColor = "grey";
+		clickedOn(op2);
+		// op2.style.backgroundColor = "#D3AF37";
+		// op2.style.color = "#ED1D24";
+		// op1.style.backgroundColor = "grey";
+		// op2.style.backgroundColor = "green";
+		// op3.style.backgroundColor = "grey";
+		// op4.style.backgroundColor = "grey";
 		selected = op2.value;
 		picked = "op2";
+		correctAnswer = op2.value;
 	})
 
 	// Show selection for op3
 	op3.addEventListener("click", () => {
-		op1.style.backgroundColor = "grey";
-		op2.style.backgroundColor = "grey";
-		op3.style.backgroundColor = "green";
-		op4.style.backgroundColor = "grey";
+		clickedOn(op3);
+		// op3.style.backgroundColor = "#D3AF37";
+		// op3.style.color = "#ED1D24";
+		// op1.style.backgroundColor = "grey";
+		// op2.style.backgroundColor = "grey";
+		// op3.style.backgroundColor = "green";
+		// op4.style.backgroundColor = "grey";
 		selected = op3.value;
 		picked = "op3";
+		correctAnswer = op3.value;
 	})
 
 	// Show selection for op4
 	op4.addEventListener("click", () => {
-		op1.style.backgroundColor = "grey";
-		op2.style.backgroundColor = "grey";
-		op3.style.backgroundColor = "grey";
-		op4.style.backgroundColor = "green";
+		clickedOn(op4);
+		// op1.style.backgroundColor = "grey";
+		// op2.style.backgroundColor = "grey";
+		// op3.style.backgroundColor = "grey";
+		// op4.style.backgroundColor = "green";
 		selected = op4.value;
 		picked = "op4";
+		correctAnswer = op4.value;
 	})
 
 	// // Grabbing the evaluate button
@@ -362,10 +448,12 @@ next.addEventListener("click", () => {
 		window.alert("Please select an answer.");
 		return ""
 	}
+	key.push(isCorrect());
 	option.push(picked);
 	answers.push(selected);
-	console.log(answers);
-	console.log(option);
+	// console.log(answers);
+	// console.log(option);
+	console.log(key);
 	previous.disabled = false;
 	previous.hidden = false;
 	defaultColors();
@@ -432,6 +520,7 @@ previous.addEventListener("click", () => {
 		iterate(nums[nums.length-(1+prevClicked)]);
 		answers.pop();
 		option.pop();
+		key.pop();
 		// console.log("try block");
 		// console.log(title.innerText);
 		if (reverseString(title.innerText)[0] == '1') {
@@ -457,6 +546,7 @@ previous.addEventListener("click", () => {
 var choices = "";
 var questions = "";
 var options = "";
+var answerKey = "";
 submit.addEventListener("click", () => {
 	if (selected == "") {
 		submit.removeAttribute("href")
@@ -466,6 +556,8 @@ submit.addEventListener("click", () => {
 
 	else {
 		answers.push(selected);
+		option.push(picked);
+		key.push(correctAnswer);
 		console.log(answers);
 		for (i=0; i<answers.length; i++) {
 			choices += answers[i]+ " ";
@@ -476,14 +568,18 @@ submit.addEventListener("click", () => {
 		for (i=0; i<option.length; i++) {
 			options += option[i]+ " ";
 		}
+		for (i=0; i<key.length; i++) {
+			answerKey += key[i]+ " ";
+		}
 		console.log(choices);
 		console.log(questions);
 		console.log(options);
 		localStorage.setItem("playerChoices", choices);
 		localStorage.setItem("quizQuestions", questions);
 		localStorage.setItem("optionsPicked", options);
+		localStorage.setItem("key", answerKey);
 
-		// submit.href = "submit.html";
+		submit.href = "submit.html";
 
 	}
 })
