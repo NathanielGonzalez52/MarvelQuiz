@@ -27,6 +27,12 @@ body {
 .question-container {
   padding-bottom: 2rem;
 }
+
+.ques-pics {
+  width: 10%;
+  padding-bottom: 1.5rem;
+  position: absolute;
+}
 /* Style for title */
 #title {
   font-size: 3rem;
@@ -51,10 +57,6 @@ body {
   font-size: 2.7rem;
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
-}
-
-.btn {
-  /* margin: 5rem; */
 }
 
 .first {
@@ -88,16 +90,17 @@ body {
   /* margin-top:6.5rem; */
 }
 
+
 .next {
   position: absolute;
   right: 25rem;
-  top: 35rem;
+  top: 45rem;
 }
 
 .previous {
   position: absolute;
   left: 18rem;
-  top: 35rem;
+  top: 45rem;
 }
 
 .submit {
