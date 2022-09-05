@@ -19,6 +19,14 @@ for (x=0;x<correctAnswer.length; x++) {
 	}
 }
 
+function notCorrect(x) {
+  // var op1 = document.getElementsByClassName("btn" + String(button));
+  // var op2 = document.getElementsByClassName("btn" + String((button+1)));
+  // var op3 = document.getElementsByClassName("btn" + String((button+2)));
+  // var op4 = document.getElementsByClassName("btn" + String((button+3)));
+  x.style.textDecoration = "line-through";
+}
+
 function optionChosen(x) {
 	var first = false;
 	var second = false;
@@ -246,72 +254,77 @@ for (i=0; i<quizQuestions.length; i++) {
 
 	if (op1[0].value == "true") {
 	    op1[0].style.backgroundColor = "green";
+      op2[0].style.textDecoration = "line-through";
+      op3[0].style.textDecoration = "line-through";
+      op4[0].style.textDecoration = "line-through";
 	    if (answers[i] != op1[0].value) {
 				if (optionChosen(i)  == "second") {
-					op2[0].style.backgroundColor = "blue";
+					op2[0].style.backgroundColor = "gray";
 				}
 				if (optionChosen(i)  == "third") {
-					op3[0].style.backgroundColor = "blue";
+					op3[0].style.backgroundColor = "gray";
 				}
 				if (optionChosen(i)  == "fourth") {
-					op4[0].style.backgroundColor = "blue";
+					op4[0].style.backgroundColor = "gray";
 				}
 
 			}
-			else {
 
-			}
 	  }
 	if (op2[0].value == "true") {
 	   op2[0].style.backgroundColor = "green";
+     op1[0].style.textDecoration = "line-through";
+     op3[0].style.textDecoration = "line-through";
+     op4[0].style.textDecoration = "line-through";
 		 if (answers[i] != op2[0].value) {
 			 if (optionChosen(i)  == "first") {
-				 op1[0].style.backgroundColor = "blue";
+				 op1[0].style.backgroundColor = "gray";
 			 }
 			 if (optionChosen(i)  == "third") {
-				 op3[0].style.backgroundColor = "blue";
+				 op3[0].style.backgroundColor = "gray";
 			 }
 			 if (optionChosen(i)  == "fourth") {
-				 op4[0].style.backgroundColor = "blue";
+				 op4[0].style.backgroundColor = "gray";
 			 }
 		 }
-		 else {
 
-		 }
 	  }
 	if (op3[0].value == "true") {
 	   op3[0].style.backgroundColor = "green";
+     op1[0].style.textDecoration = "line-through";
+     op2[0].style.textDecoration = "line-through";
+     op4[0].style.textDecoration = "line-through";
+
 		 if (answers[i] != op3[0].value) {
 			 if (optionChosen(i)  == "first") {
-				 op1[0].style.backgroundColor = "blue";
+				 op1[0].style.backgroundColor = "gray";
 			 }
 			 if (optionChosen(i)  == "second") {
-				 op2[0].style.backgroundColor = "blue";
+				 op2[0].style.backgroundColor = "gray";
 			 }
 			 if (optionChosen(i)  == "fourth") {
-				 op4[0].style.backgroundColor = "blue";
+				 op4[0].style.backgroundColor = "gray";
 			 }
 		 }
-		 else {
 
-		 }
 	  }
 	if (op4[0].value == "true") {
 	   op4[0].style.backgroundColor = "green";
+     op1[0].style.textDecoration = "line-through";
+     op2[0].style.textDecoration = "line-through";
+     op3[0].style.textDecoration = "line-through";
 		 if (answers[i] != op1[0].value) {
 			 if (optionChosen(i)  == "first") {
-				 op1[0].style.backgroundColor = "blue";
+				 op1[0].style.backgroundColor = "gray";
 			 }
 			 if (optionChosen(i)  == "second") {
-				 op2[0].style.backgroundColor = "blue";
+				 op2[0].style.backgroundColor = "gray";
 			 }
 			 if (optionChosen(i)  == "third") {
-				 op3[0].style.backgroundColor = "blue";
+				 op3[0].style.backgroundColor = "gray";
 			 }
 		 }
-		 else {
 
-		 }
 	  }
 	button+=3;
 	// console.log("hello");
@@ -323,6 +336,11 @@ for (x=0; x<answers.length; x++) {
 	}
 }
 // console.log(score);
-
+function endMessage() {
+  var message = document.getElementsByClassName("playerMessage")[0];
+  if (score >= 8) {
+    message.innerText = "Excelsior! You got " + score + " correct!";
+  }
+}
 var message = document.getElementsByClassName("playerMessage")[0];
-message.innerText = "Excelsior! You got " + score + " correct!";
+message.innerText = "Excelsior! \nYou got " + score + " correct!";

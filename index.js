@@ -2,7 +2,6 @@ var selected = "";
 var correctAnswer = "";
 const answers = [];
 const option = [];
-const key = [];
 
 function defaultColors () {
 	const op1 = document.getElementById('op1');
@@ -30,58 +29,58 @@ function clickedOn (x) {
 	x.style.color = "#D3AF37";
 	if (x == op1) {
 		op2.style.backgroundColor = "grey";
-		op2.style.color = "#FFFFFF";
+		op2.style.color = "#DDDDDD";
 		op3.style.backgroundColor = "grey";
-		op3.style.color = "#FFFFFF";
+		op3.style.color = "#DDDDDD";
 		op4.style.backgroundColor = "grey";
-		op4.style.color = "#FFFFFF";
+		op4.style.color = "#DDDDDD";
 	}
 
 	if (x == op2) {
 		op1.style.backgroundColor = "grey";
-		op1.style.color = "#FFFFFF";
+		op1.style.color = "#DDDDDD";
 		op3.style.backgroundColor = "grey";
-		op3.style.color = "#FFFFFF";
+		op3.style.color = "#DDDDDD";
 		op4.style.backgroundColor = "grey";
-		op4.style.color = "#FFFFFF";
+		op4.style.color = "#DDDDDD";
 	}
 	if (x == op3) {
 		op1.style.backgroundColor = "grey";
-		op1.style.color = "#FFFFFF";
+		op1.style.color = "#DDDDDD";
 		op2.style.backgroundColor = "grey";
-		op2.style.color = "#FFFFFF";
+		op2.style.color = "#DDDDDD";
 		op4.style.backgroundColor = "grey";
-		op4.style.color = "#FFFFFF";
+		op4.style.color = "#DDDDDD";
 	}
 	if (x == op4) {
 		op1.style.backgroundColor = "grey";
-		op1.style.color = "#FFFFFF";
+		op1.style.color = "#DDDDDD";
 		op2.style.backgroundColor = "grey";
-		op2.style.color = "#FFFFFF";
+		op2.style.color = "#DDDDDD";
 		op3.style.backgroundColor = "grey";
-		op3.style.color = "#FFFFFF";
+		op3.style.color = "#DDDDDD";
 	}
 }
 
-function isCorrect() {
-	const op1 = document.getElementById('op1');
-	const op2 = document.getElementById('op2');
-	const op3 = document.getElementById('op3');
-	const op4 = document.getElementById('op4');
-
-	if (op1.value == "true") {
-		return op1.value;
-	}
-	if (op2.value == "true") {
-		return op2.value;
-	}
-	if (op3.value == "true") {
-		return op3.value;
-	}
-	if (op4.value == "true") {
-		return op4.value;
-	}
-}
+// function isCorrect() {
+// 	const op1 = document.getElementById('op1');
+// 	const op2 = document.getElementById('op2');
+// 	const op3 = document.getElementById('op3');
+// 	const op4 = document.getElementById('op4');
+//
+// 	if (op1.value == "true") {
+// 		return op1.value;
+// 	}
+// 	if (op2.value == "true") {
+// 		return op2.value;
+// 	}
+// 	if (op3.value == "true") {
+// 		return op3.value;
+// 	}
+// 	if (op4.value == "true") {
+// 		return op4.value;
+// 	}
+// }
 
 const Questions = [{
 		id: 0,
@@ -448,12 +447,12 @@ next.addEventListener("click", () => {
 		window.alert("Please select an answer.");
 		return ""
 	}
-	key.push(isCorrect());
+	// key.push(isCorrect());
 	option.push(picked);
 	answers.push(selected);
 	// console.log(answers);
 	// console.log(option);
-	console.log(key);
+	// console.log(key);
 	previous.disabled = false;
 	previous.hidden = false;
 	defaultColors();
@@ -557,7 +556,6 @@ submit.addEventListener("click", () => {
 	else {
 		answers.push(selected);
 		option.push(picked);
-		key.push(correctAnswer);
 		console.log(answers);
 		for (i=0; i<answers.length; i++) {
 			choices += answers[i]+ " ";
@@ -568,16 +566,14 @@ submit.addEventListener("click", () => {
 		for (i=0; i<option.length; i++) {
 			options += option[i]+ " ";
 		}
-		for (i=0; i<key.length; i++) {
-			answerKey += key[i]+ " ";
-		}
+
 		console.log(choices);
 		console.log(questions);
 		console.log(options);
 		localStorage.setItem("playerChoices", choices);
 		localStorage.setItem("quizQuestions", questions);
 		localStorage.setItem("optionsPicked", options);
-		localStorage.setItem("key", answerKey);
+		// localStorage.setItem("key", answerKey);
 
 		submit.href = "submit.html";
 
