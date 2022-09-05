@@ -339,8 +339,17 @@ for (x=0; x<answers.length; x++) {
 function endMessage() {
   var message = document.getElementsByClassName("playerMessage")[0];
   if (score >= 8) {
-    message.innerText = "Excelsior! You got " + score + " correct!";
+    message.innerText = "Excelsior! \nYou got " + score + " correct!";
+  }
+
+  else if (score <8 || score >= 5) {
+    message.innerText  = "Do you even watch the movies? \nYou only got " + score + " correct."
+  }
+  else {
+    message.innerText = "Not quite Avenger material...\nYou only got " + score + " correct."
   }
 }
-var message = document.getElementsByClassName("playerMessage")[0];
-message.innerText = "Excelsior! \nYou got " + score + " correct!";
+
+endMessage();
+// var message = document.getElementsByClassName("playerMessage")[0];
+// message.innerText = "Excelsior! \nYou got " + score + " correct!";

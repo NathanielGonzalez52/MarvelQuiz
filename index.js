@@ -245,6 +245,78 @@ const Questions = [{
 			{ text: "Seven", isCorrect: true },
 			{ text: "Nine", isCorrect: false }
 		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
+	},
+	{
+		id: 17,
+		q: "Which one of these phrases is NOT required to brainwash Bucky?",
+		a: [{ text: "Freight Car", isCorrect: false },
+			{ text: "Furnace", isCorrect: false },
+			{ text: "Seven", isCorrect: true },
+			{ text: "Nine", isCorrect: false }
+		]
 	}
 ]
 
