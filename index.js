@@ -247,77 +247,159 @@ const Questions = [{
 		]
 	},
 	{
-		id: 17,
-		q: "Which one of these phrases is NOT required to brainwash Bucky?",
-		a: [{ text: "Freight Car", isCorrect: false },
-			{ text: "Furnace", isCorrect: false },
-			{ text: "Seven", isCorrect: true },
-			{ text: "Nine", isCorrect: false }
+		id: 18,
+		q: "When were Tony's parents murdered??",
+		a: [{ text: "December 15, 1991", isCorrect: false },
+			{ text: "December 18, 1991", isCorrect: false },
+			{ text: "December 16, 1991", isCorrect: true },
+			{ text: "December 19, 1991", isCorrect: false }
 		]
 	},
 	{
-		id: 17,
-		q: "Which one of these phrases is NOT required to brainwash Bucky?",
-		a: [{ text: "Freight Car", isCorrect: false },
-			{ text: "Furnace", isCorrect: false },
-			{ text: "Seven", isCorrect: true },
-			{ text: "Nine", isCorrect: false }
+		id: 19,
+		q: "Where did Thor go to obtain Stormbreaker?",
+		a: [{ text: "Nidavellir", isCorrect: false },
+			{ text: "Titan", isCorrect: false },
+			{ text: "Knowhere", isCorrect: true },
+			{ text: "Milano", isCorrect: false }
 		]
 	},
 	{
-		id: 17,
-		q: "Which one of these phrases is NOT required to brainwash Bucky?",
-		a: [{ text: "Freight Car", isCorrect: false },
-			{ text: "Furnace", isCorrect: false },
-			{ text: "Seven", isCorrect: true },
-			{ text: "Nine", isCorrect: false }
+		id: 18,
+		q: "What is the name of Starlord's ship?",
+		a: [{ text: "Guardian's Vessel", isCorrect: false },
+			{ text: "Milano", isCorrect: false },
+			{ text: "Star", isCorrect: true },
+			{ text: "The Planetary", isCorrect: false }
 		]
 	},
 	{
-		id: 17,
-		q: "Which one of these phrases is NOT required to brainwash Bucky?",
-		a: [{ text: "Freight Car", isCorrect: false },
-			{ text: "Furnace", isCorrect: false },
-			{ text: "Seven", isCorrect: true },
-			{ text: "Nine", isCorrect: false }
+		id: 19,
+		q: "In the beginning of The Incredible Hulk, what country does Bruce Banner live in?",
+		a: [{ text: "Portugal", isCorrect: false },
+			{ text: "Spain", isCorrect: false },
+			{ text: "Venezuela", isCorrect: true },
+			{ text: "Brazil", isCorrect: false }
 		]
 	},
 	{
-		id: 17,
-		q: "Which one of these phrases is NOT required to brainwash Bucky?",
-		a: [{ text: "Freight Car", isCorrect: false },
-			{ text: "Furnace", isCorrect: false },
-			{ text: "Seven", isCorrect: true },
-			{ text: "Nine", isCorrect: false }
+		id: 20,
+		q: "In Iron Man 3, Happy is seriously injured duing a bombing where?",
+		a: [{ text: "JPL Labs", isCorrect: false },
+			{ text: "Stark Tower", isCorrect: false },
+			{ text: "SHIELD Facility", isCorrect: true },
+			{ text: "TCL Chinese Theatre", isCorrect: false }
 		]
 	},
 	{
-		id: 17,
-		q: "Which one of these phrases is NOT required to brainwash Bucky?",
-		a: [{ text: "Freight Car", isCorrect: false },
-			{ text: "Furnace", isCorrect: false },
-			{ text: "Seven", isCorrect: true },
-			{ text: "Nine", isCorrect: false }
+		id: 21,
+		q: "What is the name of the boy that helps Tony in Iron Man 3?",
+		a: [{ text: "John", isCorrect: false },
+			{ text: "Gabriel", isCorrect: false },
+			{ text: "Harley", isCorrect: true },
+			{ text: "Hayden", isCorrect: false }
 		]
 	},
 	{
-		id: 17,
-		q: "Which one of these phrases is NOT required to brainwash Bucky?",
-		a: [{ text: "Freight Car", isCorrect: false },
-			{ text: "Furnace", isCorrect: false },
-			{ text: "Seven", isCorrect: true },
-			{ text: "Nine", isCorrect: false }
+		id: 22,
+		q: "What is the name of the scientist that helps Steve become Captain America?",
+		a: [{ text: "Howard Stark", isCorrect: false },
+			{ text: "Dr. Emil Hamilton", isCorrect: false },
+			{ text: "Johann Schmidt", isCorrect: true },
+			{ text: "Abraham Erskine", isCorrect: false }
 		]
 	},
 	{
-		id: 17,
-		q: "Which one of these phrases is NOT required to brainwash Bucky?",
-		a: [{ text: "Freight Car", isCorrect: false },
-			{ text: "Furnace", isCorrect: false },
-			{ text: "Seven", isCorrect: true },
-			{ text: "Nine", isCorrect: false }
+		id: 23,
+		q: "What was Steve Rogers dosed with during the Super Soldier procedure?",
+		a: [{ text: "Gamma Rays", isCorrect: false },
+			{ text: "Proto-Rays ", isCorrect: false },
+			{ text: "Vita-Rays", isCorrect: true },
+			{ text: "Super Rays", isCorrect: false }
+		]
+	},
+	{
+		id: 24,
+		q: "What type of poisoning did Stark suffer from in Iron Man 2?",
+		a: [{ text: "Vibranium", isCorrect: false },
+			{ text: "Platinum", isCorrect: false },
+			{ text: "Plutonium", isCorrect: true },
+			{ text: "Palladium", isCorrect: false }
+		]
+	},
+	{
+		id: 25,
+		q: "What floor does Sam Wilson jump out of in The Winter Soldier?",
+		a: [{ text: "31", isCorrect: false },
+			{ text: "23", isCorrect: false },
+			{ text: "41", isCorrect: true },
+			{ text: "49", isCorrect: false }
+		]
+	},
+	{
+		id: 26,
+		q: "In Infinity War, where are Wanda and Vision when they are ambushed?",
+		a: [{ text: "London", isCorrect: false },
+			{ text: "Toronto", isCorrect: false },
+			{ text: "New York", isCorrect: true },
+			{ text: "Scotland", isCorrect: false }
+		]
+	},
+	{
+		id: 27,
+		q: "How many stones does Thanos have when he arrives on Titan?",
+		a: [{ text: "3", isCorrect: false },
+			{ text: "4", isCorrect: false },
+			{ text: "2", isCorrect: true },
+			{ text: "1", isCorrect: false }
+		]
+	},
+	{
+		id: 28,
+		q: "In Doctor Strange, what is the name of the parapalegic that uses magic to walk?",
+		a: [{ text: "Adam Strange", isCorrect: false },
+			{ text: "Justin Langmore", isCorrect: false },
+			{ text: "Jonathan Pangmore", isCorrect: true },
+			{ text: "Lily Potter", isCorrect: false }
+		]
+	},
+	{
+		id: 29,
+		q: "What is the title of Flash's book in Spiderman: No Way Home?",
+		a: [{ text: "Spideys's Best Friend", isCorrect: false },
+			{ text: "Spider-Man's Super Friend", isCorrect: false },
+			{ text: "Flashpoint", isCorrect: true },
+			{ text: "Web of Friendships", isCorrect: false }
+		]
+	},
+	{
+		id: 30,
+		q: "Where are Peter and Quentin when Quentin obtains EDITH?",
+		a: [{ text: "Abandoned Building", isCorrect: false },
+			{ text: "A Bar", isCorrect: false },
+			{ text: "A Restaurant", isCorrect: true },
+			{ text: "A House", isCorrect: false }
+		]
+	},
+	{
+		id: 30 ,
+		q: "Which Avenger does Scott Lang fight in Ant-Man?",
+		a: [{ text: "Falcon", isCorrect: false },
+			{ text: "Black Widow", isCorrect: false },
+			{ text: "War Machine", isCorrect: true },
+			{ text: "Iron Man", isCorrect: false }
+		]
+	},
+	{
+		id: 31,
+		q: "Which one of these was NOT part of Scott Lang's house arrest montage?",
+		a: [{ text: "Karoke", isCorrect: false },
+			{ text: "Napping", isCorrect: false },
+			{ text: "Drumming", isCorrect: true },
+			{ text: "Reading", isCorrect: false }
 		]
 	}
+
 ]
 
 // function answerChoices(ques) {
