@@ -89,13 +89,13 @@ const Questions = [{
 			{ text: "Natalie Roman", isCorrect: false }
 		]
 	},
-	{
+  {
 		id: 3,
-		q: "What does S.H.I.E.L.D stand for?",
-		a: [{ text: "Strategic Home Intergral Enemy Line Division", isCorrect: false },
-			{ text: "Strategy Hill Interforce Evil Latent Evil ", isCorrect: false },
-			{ text: "Strategic Homeland Intervention Enforcement and Logistics Division", isCorrect: true },
-			{ text: "None of these", isCorrect: false }
+		q: "What book made Paul Rudd cry during house arrest?",
+		a: [{ text: "The Fault In Our Stars", isCorrect: false },
+			{ text: "Lord of the Flies", isCorrect: false },
+			{ text: "Paper Towns", isCorrect: true },
+			{ text: "Twlight", isCorrect: false }
 		]
 	},
 	{

@@ -28,10 +28,16 @@ body {
   padding-bottom: 2rem;
 }
 
+/* .marvel-pics {
+  padding-bottom: 100rem;
+  display: block;
+} */
+
 .ques-pics {
-  width: 10%;
+  width: 38%;
   padding-bottom: 1.5rem;
   position: absolute;
+  left: 25rem;
 }
 /* Style for title */
 #title {
@@ -62,45 +68,47 @@ body {
 .first {
   position: absolute;
   white-space: normal;
-  max-width: 20%;
+  max-width: 40%;
+  top: 40rem;
 }
 
 
 .second {
   position: absolute;
-  top: 25rem;
+  top: 45rem;
   white-space: normal;
-  max-width: 20%;
+  max-width: 40%;
 }
 
 
 .third {
   position: absolute;
   right: 20rem;
+  top: 40rem;
   white-space: normal;
-  max-width: 30%;
+  max-width: 40%;
 }
 
 .fourth {
   position: absolute;
-  top: 25rem;
+  top: 45rem;
   right: 20rem;
   white-space: normal;
-  max-width: 20%;
+  max-width: 40%;
   /* margin-top:6.5rem; */
 }
 
 
 .next {
   position: absolute;
-  right: 25rem;
-  top: 45rem;
+  right: 10rem;
+  top: 25rem;
 }
 
 .previous {
   position: absolute;
-  left: 18rem;
-  top: 45rem;
+  right: 75rem;
+  top: 25rem;
 }
 
 .submit {
