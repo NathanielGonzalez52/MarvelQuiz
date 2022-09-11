@@ -652,6 +652,7 @@ next.addEventListener("click", () => {
 			// title.innerText = "Question " + Number(nums.indexOf(id));
 			// iterate(nextQuestion.toString());
 		prevClicked--;
+		console.log(prevClicked);
 		title.innerText = "Question " + Number(id-prevClicked);
 		iterate(nums[nums.length-(1+prevClicked)]);
 		if (reverseString(title.innerText)[0] == '0') {
@@ -685,46 +686,45 @@ var currId = nums[nums.length-1];
 // FINDS PREVIOUS BUTTON
 // ADD FUNCTIONALITY TO PREVIOUS BUTTON
 previous.addEventListener("click", () => {
-	defaultColors();
 	next.hidden = false;
 	submit.hidden = true;
-	// prevClicked++;
-	// var prevId = nums[nums.length-(1+prevClicked)];
-	// var backWards = id-prevClicked;
-	// var currId = nums[nums.length-1];
+	var prevId = nums[nums.length-(1+prevClicked)];
+	var backWards = id-prevClicked;
+	var currId = nums[nums.length-1];
 	if (id==1 || backWards<1) {
 		previous.disabled = true;
 	}
 	else {
-		previous.disabled = false;
-		// prevClicked++;
-		// if (prevClicked > 0) {
-			// var prevId = nums[nums.length-(1+prevClicked)];
-			// var backWards = id-prevClicked;
-		// }
-	try {
 		prevClicked++;
+		console.log("else block");
+		previous.disabled = false;
+		if (prevClicked > 0) {
+			var prevId = nums[nums.length-(1+prevClicked)];
+			var backWards = id-prevClicked;
+		}
+	try {
+		console.log(prevClicked);
 		var prevId = nums[nums.length-(1+prevClicked)];
 		var backWards = id-prevClicked;
 		title.innerText = "Question " + Number(backWards);
 		iterate(nums[nums.length-(1+prevClicked)]);
 		answers.pop();
 		option.pop();
-		key.pop();
-		// console.log("try block");
+		console.log("try block");
 		// console.log(title.innerText);
 		if (reverseString(title.innerText)[0] == '1') {
 			previous.hidden = true;
 		}
 	}
 	catch(err) {
+		console.log(err);
 		// title.innerText = "Question " + Number(id);
 		previous.hidden = true;
 		prevClicked--;
 		title.innerText = "Question " + Number(1);
 		iterate(currId);
 		console.log("catch block");
-		console.log("Catch Block: " + prevClicked);
+		// console.log("Catch Block: " + prevClicked);
 		// console.log(prevClicked);
   	// console.log(err);
 	}
@@ -737,10 +737,10 @@ var choices = "";
 var questions = "";
 var options = "";
 var answerKey = "";
+
+const line = document.getElementsByClassName('line')[0];
 submit.addEventListener("click", () => {
 	if (selected == "") {
-		submit.removeAttribute("href")
-
 		window.alert("Please select an answer.");
 	}
 
@@ -764,9 +764,8 @@ submit.addEventListener("click", () => {
 		localStorage.setItem("playerChoices", choices);
 		localStorage.setItem("quizQuestions", questions);
 		localStorage.setItem("optionsPicked", options);
-		// localStorage.setItem("key", answerKey);
+		window.location="submit.html";
 
-		submit.href = "submit.html";
 
 	}
 })

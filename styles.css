@@ -117,13 +117,11 @@ body {
   border-style: solid;
   border-radius: 12px;
   position: absolute;
-  left: 38rem;
-  top: 40rem;
+  left: 32rem;
+  top: 50rem;
   font-size: 3.5rem;
   text-decoration: none;
-  visibility: hidden;
 }
-
 .submit:hover {
   font-size: 3.7rem;
   color: rgba(255, 255, 255, 1);
