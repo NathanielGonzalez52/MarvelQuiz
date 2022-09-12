@@ -1,7 +1,7 @@
 // import {answers} from "index.js";
 // console.log(answers);
 // localStorage.setItem("alter", "Clark Kent");
- var score = 0;
+var score = 0;
 var userAnswers = localStorage.getItem("playerChoices");
 var questions = localStorage.getItem("quizQuestions");
 var options = localStorage.getItem("optionsPicked");
@@ -12,12 +12,6 @@ var quizQuestions = questions.split(" ");
 var picked = options.split(" ");
 var correctAnswer = key.split(" ");
 
-for (x=0;x<correctAnswer.length; x++) {
-	if (answers[x] == correctAnswer[x]) {
-		score++;
-		console.log(score);
-	}
-}
 
 function notCorrect(x) {
   // var op1 = document.getElementsByClassName("btn" + String(button));
@@ -63,6 +57,7 @@ var score = 0;
 const Questions = [{
 		id: 0,
 		q: 'Which character said, "I never said you were a superhero"?',
+		pic: "images\Leslie_bibb.webp",
 		a: [{ text: "Obediah Stane", isCorrect: false },
 			{ text: "Pepper Potts", isCorrect: false },
 			{ text: "Christine Everheart", isCorrect: true },
@@ -194,7 +189,7 @@ const Questions = [{
 	{
 		id: 13,
 		q: "In Infinity War, who is the last character that is dusted onscreen?",
-		piC: "images/dusted.jpg",
+		pic: "images/dusted.jpg",
 		a: [{ text: "Spider-Man", isCorrect: false },
 			{ text: "The Winter Soldier", isCorrect: false },
 			{ text: "Falcon", isCorrect: false },
@@ -214,7 +209,7 @@ const Questions = [{
 	{
 		id: 15,
 		q: "What is the name of the soldier that become Abomination?",
-		pic: "images/emil_blonsky.jpg",
+		pic: "images/Emil2.webp",
 		a: [{ text: "Emmet Blonsky", isCorrect: false },
 			{ text: "Emil Blonsky", isCorrect: true },
 			{ text: "Emilio Blonsky", isCorrect: false },
@@ -255,9 +250,9 @@ const Questions = [{
 		id: 19,
 		q: "Where did Thor go to obtain Stormbreaker?",
 		pic: "images/strombreaker.jpg",
-		a: [{ text: "Nidavellir", isCorrect: false },
+		a: [{ text: "Nidavellir", isCorrect: true },
 			{ text: "Titan", isCorrect: false },
-			{ text: "Knowhere", isCorrect: true },
+			{ text: "Knowhere", isCorrect: false },
 			{ text: "Milano", isCorrect: false }
 		]
 	},
@@ -266,8 +261,8 @@ const Questions = [{
 		q: "What is the name of Starlord's ship?",
 		pic: "images/milano.jpg",
 		a: [{ text: "Guardian's Vessel", isCorrect: false },
-			{ text: "Milano", isCorrect: false },
-			{ text: "Star", isCorrect: true },
+			{ text: "Milano", isCorrect: true },
+			{ text: "Star", isCorrect: false },
 			{ text: "The Planetary", isCorrect: false }
 		]
 	},
@@ -277,8 +272,8 @@ const Questions = [{
 		pic: "images/ed_norton.jpg",
 		a: [{ text: "Portugal", isCorrect: false },
 			{ text: "Spain", isCorrect: false },
-			{ text: "Venezuela", isCorrect: true },
-			{ text: "Brazil", isCorrect: false }
+			{ text: "Venezuela", isCorrect: false },
+			{ text: "Brazil", isCorrect: true }
 		]
 	},
 	{
@@ -287,8 +282,8 @@ const Questions = [{
 		pic: "images/happy.jpg",
 		a: [{ text: "JPL Labs", isCorrect: false },
 			{ text: "Stark Tower", isCorrect: false },
-			{ text: "SHIELD Facility", isCorrect: true },
-			{ text: "TCL Chinese Theatre", isCorrect: false }
+			{ text: "SHIELD Facility", isCorrect: false },
+			{ text: "TCL Chinese Theatre", isCorrect: true }
 		]
 	},
 	{
@@ -307,8 +302,8 @@ const Questions = [{
 		pic: "images/Abraham_Erskine.jpg",
 		a: [{ text: "Howard Stark", isCorrect: false },
 			{ text: "Dr. Emil Hamilton", isCorrect: false },
-			{ text: "Johann Schmidt", isCorrect: true },
-			{ text: "Abraham Erskine", isCorrect: false }
+			{ text: "Johann Schmidt", isCorrect: false },
+			{ text: "Abraham Erskine", isCorrect: true }
 		]
 	},
 	{
@@ -327,8 +322,8 @@ const Questions = [{
 		pic: "images/palladium.jpg",
 		a: [{ text: "Vibranium", isCorrect: false },
 			{ text: "Platinum", isCorrect: false },
-			{ text: "Plutonium", isCorrect: true },
-			{ text: "Palladium", isCorrect: false }
+			{ text: "Plutonium", isCorrect: false },
+			{ text: "Palladium", isCorrect: true }
 		]
 	},
 	{
@@ -347,18 +342,18 @@ const Questions = [{
 		pic: "images/wanda_vision.jpg",
 		a: [{ text: "London", isCorrect: false },
 			{ text: "Toronto", isCorrect: false },
-			{ text: "New York", isCorrect: true },
-			{ text: "Scotland", isCorrect: false }
+			{ text: "New York", isCorrect: false },
+			{ text: "Scotland", isCorrect: true }
 		]
 	},
 	{
 		id: 29,
 		q: "How many stones does Thanos have when he arrives on Titan?",
 		pic: "images/thanos_iw.jpg",
-		a: [{ text: "3", isCorrect: false },
-			{ text: "4", isCorrect: false },
-			{ text: "2", isCorrect: true },
-			{ text: "1", isCorrect: false }
+		a: [{ text: "Four", isCorrect: true },
+			{ text: "Three", isCorrect: false },
+			{ text: "Two", isCorrect: false },
+			{ text: "One", isCorrect: false }
 		]
 	},
 	{
@@ -386,8 +381,8 @@ const Questions = [{
 		q: "Where are Peter and Quentin when Quentin obtains EDITH?",
 		pic: "images/spidey_mysterio.jpg",
 		a: [{ text: "Abandoned Building", isCorrect: false },
-			{ text: "A Bar", isCorrect: false },
-			{ text: "A Restaurant", isCorrect: true },
+			{ text: "A Bar", isCorrect: true },
+			{ text: "A Restaurant", isCorrect: false },
 			{ text: "A House", isCorrect: false }
 		]
 	},
@@ -395,9 +390,9 @@ const Questions = [{
 		id: 33,
 		q: "Which Avenger does Scott Lang fight in Ant-Man?",
 		pic: "images/ant_man falc.jpg",
-		a: [{ text: "Falcon", isCorrect: false },
+		a: [{ text: "Falcon", isCorrect: true },
 			{ text: "Black Widow", isCorrect: false },
-			{ text: "War Machine", isCorrect: true },
+			{ text: "War Machine", isCorrect: false },
 			{ text: "Iron Man", isCorrect: false }
 		]
 	},
@@ -406,13 +401,14 @@ const Questions = [{
 		q: "Which one of these was NOT part of Scott Lang's house arrest montage?",
 		pic: "images/paul_rudd_house_arrest.jpg",
 		a: [{ text: "Karoke", isCorrect: false },
-			{ text: "Napping", isCorrect: false },
-			{ text: "Drumming", isCorrect: true },
+			{ text: "Napping", isCorrect: true },
+			{ text: "Drumming", isCorrect: false },
 			{ text: "Reading", isCorrect: false }
 		]
 	}
 
 ]
+
 
 // MAKE IT A VARIABLE
 var button = 0;
@@ -441,11 +437,12 @@ for (i=0; i<quizQuestions.length; i++) {
 	op4[0].value = Questions[quizQuestions[i]].a[3].isCorrect;
 
 	if (op1[0].value == "true") {
+    console.log(answers[i]);
 	    op1[0].style.backgroundColor = "green";
       op2[0].style.textDecoration = "line-through";
       op3[0].style.textDecoration = "line-through";
       op4[0].style.textDecoration = "line-through";
-	    if (answers[i] != op1[0].value) {
+	    if (answers[i] != "true") {
 				if (optionChosen(i)  == "second") {
 					op2[0].style.backgroundColor = "gray";
 				}
@@ -460,11 +457,12 @@ for (i=0; i<quizQuestions.length; i++) {
 
 	  }
 	if (op2[0].value == "true") {
+    console.log(answers[i]);
 	   op2[0].style.backgroundColor = "green";
      op1[0].style.textDecoration = "line-through";
      op3[0].style.textDecoration = "line-through";
      op4[0].style.textDecoration = "line-through";
-		 if (answers[i] != op2[0].value) {
+		 if (answers[i] != "true") {
 			 if (optionChosen(i)  == "first") {
 				 op1[0].style.backgroundColor = "gray";
 			 }
@@ -478,12 +476,13 @@ for (i=0; i<quizQuestions.length; i++) {
 
 	  }
 	if (op3[0].value == "true") {
+    console.log(answers[i]);
 	   op3[0].style.backgroundColor = "green";
      op1[0].style.textDecoration = "line-through";
      op2[0].style.textDecoration = "line-through";
      op4[0].style.textDecoration = "line-through";
 
-		 if (answers[i] != op3[0].value) {
+		 if (answers[i] != "true") {
 			 if (optionChosen(i)  == "first") {
 				 op1[0].style.backgroundColor = "gray";
 			 }
@@ -497,17 +496,19 @@ for (i=0; i<quizQuestions.length; i++) {
 
 	  }
 	if (op4[0].value == "true") {
-	   op4[0].style.backgroundColor = "green";
-     op1[0].style.textDecoration = "line-through";
-     op2[0].style.textDecoration = "line-through";
-     op3[0].style.textDecoration = "line-through";
-		 if (answers[i] != op1[0].value) {
-			 if (optionChosen(i)  == "first") {
-				 op1[0].style.backgroundColor = "gray";
-			 }
-			 if (optionChosen(i)  == "second") {
-				 op2[0].style.backgroundColor = "gray";
-			 }
+
+    console.log(answers[i]);
+	  op4[0].style.backgroundColor = "green";
+    op1[0].style.textDecoration = "line-through";
+    op2[0].style.textDecoration = "line-through";
+    op3[0].style.textDecoration = "line-through";
+		if (answers[i] != op1[0].value) {
+		 if (optionChosen(i)  == "first") {
+			 op1[0].style.backgroundColor = "gray";
+     }
+     if (optionChosen(i)  == "second") {
+				op2[0].style.backgroundColor = "gray";
+      }
 			 if (optionChosen(i)  == "third") {
 				 op3[0].style.backgroundColor = "gray";
 			 }
@@ -523,21 +524,23 @@ for (x=0; x<answers.length; x++) {
 		score++;
 	}
 }
+console.log(score);
 // console.log(score);
-function endMessage() {
-  var message = document.getElementsByClassName("playerMessage")[0];
-  if (score >= 8) {
-    message.innerText = "Excelsior! \nYou got " + score + " correct!";
-  }
 
-  else if (score <8 || score >= 5) {
-    message.innerText  = "Do you even watch the movies? \nYou only got " + score + " correct."
-  }
-  else {
-    message.innerText = "Not quite Avenger material...\nYou only got " + score + " correct."
-  }
+var message = document.getElementsByClassName("playerMessage")[0];
+
+if (score < 5){
+  message.innerText =  "Do you even watch the movies? \nYou got " + score + " correct."
 }
 
-endMessage();
+else if (score < 7) {
+  message.innerText =  "Not quite Avenger material... \nYou only got " + score + " correct."
+
+}
+
+else if (score >= 8) {
+  message.innerText = "Excelsior! \nYou got " + score + " correct!";
+}
+
 // var message = document.getElementsByClassName("playerMessage")[0];
 // message.innerText = "Excelsior! \nYou got " + score + " correct!";

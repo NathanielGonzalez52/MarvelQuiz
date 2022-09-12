@@ -85,6 +85,7 @@ function clickedOn (x) {
 const Questions = [{
 		id: 0,
 		q: 'Which character said, "I never said you were a superhero"?',
+		pic: "images/Leslie_bibb.webp",
 		a: [{ text: "Obediah Stane", isCorrect: false },
 			{ text: "Pepper Potts", isCorrect: false },
 			{ text: "Christine Everheart", isCorrect: true },
@@ -216,7 +217,7 @@ const Questions = [{
 	{
 		id: 13,
 		q: "In Infinity War, who is the last character that is dusted onscreen?",
-		piC: "images/dusted.jpg",
+		pic: "images/dusted.jpg",
 		a: [{ text: "Spider-Man", isCorrect: false },
 			{ text: "The Winter Soldier", isCorrect: false },
 			{ text: "Falcon", isCorrect: false },
@@ -236,7 +237,7 @@ const Questions = [{
 	{
 		id: 15,
 		q: "What is the name of the soldier that become Abomination?",
-		pic: "images/emil_blonsky.jpg",
+		pic: "images/Emil2.webp",
 		a: [{ text: "Emmet Blonsky", isCorrect: false },
 			{ text: "Emil Blonsky", isCorrect: true },
 			{ text: "Emilio Blonsky", isCorrect: false },
@@ -277,9 +278,9 @@ const Questions = [{
 		id: 19,
 		q: "Where did Thor go to obtain Stormbreaker?",
 		pic: "images/strombreaker.jpg",
-		a: [{ text: "Nidavellir", isCorrect: false },
+		a: [{ text: "Nidavellir", isCorrect: true },
 			{ text: "Titan", isCorrect: false },
-			{ text: "Knowhere", isCorrect: true },
+			{ text: "Knowhere", isCorrect: false },
 			{ text: "Milano", isCorrect: false }
 		]
 	},
@@ -288,8 +289,8 @@ const Questions = [{
 		q: "What is the name of Starlord's ship?",
 		pic: "images/milano.jpg",
 		a: [{ text: "Guardian's Vessel", isCorrect: false },
-			{ text: "Milano", isCorrect: false },
-			{ text: "Star", isCorrect: true },
+			{ text: "Milano", isCorrect: true },
+			{ text: "Star", isCorrect: false },
 			{ text: "The Planetary", isCorrect: false }
 		]
 	},
@@ -299,8 +300,8 @@ const Questions = [{
 		pic: "images/ed_norton.jpg",
 		a: [{ text: "Portugal", isCorrect: false },
 			{ text: "Spain", isCorrect: false },
-			{ text: "Venezuela", isCorrect: true },
-			{ text: "Brazil", isCorrect: false }
+			{ text: "Venezuela", isCorrect: false },
+			{ text: "Brazil", isCorrect: true }
 		]
 	},
 	{
@@ -309,8 +310,8 @@ const Questions = [{
 		pic: "images/happy.jpg",
 		a: [{ text: "JPL Labs", isCorrect: false },
 			{ text: "Stark Tower", isCorrect: false },
-			{ text: "SHIELD Facility", isCorrect: true },
-			{ text: "TCL Chinese Theatre", isCorrect: false }
+			{ text: "SHIELD Facility", isCorrect: false },
+			{ text: "TCL Chinese Theatre", isCorrect: true }
 		]
 	},
 	{
@@ -326,11 +327,11 @@ const Questions = [{
 	{
 		id: 24,
 		q: "What is the name of the scientist that helps Steve become Captain America?",
-		pic: "images/Abraham_Erskine.jpg",
+		pic: "images/Abraham_Erskine.webp",
 		a: [{ text: "Howard Stark", isCorrect: false },
 			{ text: "Dr. Emil Hamilton", isCorrect: false },
-			{ text: "Johann Schmidt", isCorrect: true },
-			{ text: "Abraham Erskine", isCorrect: false }
+			{ text: "Johann Schmidt", isCorrect: false },
+			{ text: "Abraham Erskine", isCorrect: true }
 		]
 	},
 	{
@@ -349,8 +350,8 @@ const Questions = [{
 		pic: "images/palladium.jpg",
 		a: [{ text: "Vibranium", isCorrect: false },
 			{ text: "Platinum", isCorrect: false },
-			{ text: "Plutonium", isCorrect: true },
-			{ text: "Palladium", isCorrect: false }
+			{ text: "Plutonium", isCorrect: false },
+			{ text: "Palladium", isCorrect: true }
 		]
 	},
 	{
@@ -369,18 +370,18 @@ const Questions = [{
 		pic: "images/wanda_vision.jpg",
 		a: [{ text: "London", isCorrect: false },
 			{ text: "Toronto", isCorrect: false },
-			{ text: "New York", isCorrect: true },
-			{ text: "Scotland", isCorrect: false }
+			{ text: "New York", isCorrect: false },
+			{ text: "Scotland", isCorrect: true }
 		]
 	},
 	{
 		id: 29,
 		q: "How many stones does Thanos have when he arrives on Titan?",
 		pic: "images/thanos_iw.jpg",
-		a: [{ text: "3", isCorrect: false },
-			{ text: "4", isCorrect: false },
-			{ text: "2", isCorrect: true },
-			{ text: "1", isCorrect: false }
+		a: [{ text: "Four", isCorrect: true },
+			{ text: "Three", isCorrect: false },
+			{ text: "Two", isCorrect: false },
+			{ text: "One", isCorrect: false }
 		]
 	},
 	{
@@ -396,7 +397,7 @@ const Questions = [{
 	{
 		id: 31,
 		q: "What is the title of Flash's book in Spiderman: No Way Home?",
-		pic: "images/Flash_Thompson.jpg",
+		pic: "images/flash.avif",
 		a: [{ text: "Spideys's Best Friend", isCorrect: false },
 			{ text: "Spider-Man's Super Friend", isCorrect: false },
 			{ text: "Flashpoint", isCorrect: true },
@@ -406,10 +407,10 @@ const Questions = [{
 	{
 		id: 32,
 		q: "Where are Peter and Quentin when Quentin obtains EDITH?",
-		pic: "images/spidey_mysterio.jpg",
+		pic: "images/spidey_mysterio.webp",
 		a: [{ text: "Abandoned Building", isCorrect: false },
-			{ text: "A Bar", isCorrect: false },
-			{ text: "A Restaurant", isCorrect: true },
+			{ text: "A Bar", isCorrect: true },
+			{ text: "A Restaurant", isCorrect: false },
 			{ text: "A House", isCorrect: false }
 		]
 	},
@@ -417,19 +418,19 @@ const Questions = [{
 		id: 33,
 		q: "Which Avenger does Scott Lang fight in Ant-Man?",
 		pic: "images/ant_man falc.jpg",
-		a: [{ text: "Falcon", isCorrect: false },
+		a: [{ text: "Falcon", isCorrect: true },
 			{ text: "Black Widow", isCorrect: false },
-			{ text: "War Machine", isCorrect: true },
+			{ text: "War Machine", isCorrect: false },
 			{ text: "Iron Man", isCorrect: false }
 		]
 	},
 	{
 		id: 34,
 		q: "Which one of these was NOT part of Scott Lang's house arrest montage?",
-		pic: "images/paul_rudd_house_arrest.jpg",
+		pic: "images/house_search.webp",
 		a: [{ text: "Karoke", isCorrect: false },
-			{ text: "Napping", isCorrect: false },
-			{ text: "Drumming", isCorrect: true },
+			{ text: "Napping", isCorrect: true },
+			{ text: "Drumming", isCorrect: false },
 			{ text: "Reading", isCorrect: false }
 		]
 	}
@@ -661,7 +662,7 @@ next.addEventListener("click", () => {
 			// next.value = "DONE";
 		}
 	}
-		else if (id <= 9) {
+		else if (id <= Questions.length) {
 			id++;
 			var nextQuestion = randNum();
 

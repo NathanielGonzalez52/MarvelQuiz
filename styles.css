@@ -37,7 +37,8 @@ body {
   width: 38%;
   padding-bottom: 1.5rem;
   position: absolute;
-  left: 22rem;
+  left: 28rem;
+  max-height: 70%;
 }
 /* Style for title */
 #title {
