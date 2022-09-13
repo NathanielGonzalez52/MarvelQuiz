@@ -766,8 +766,6 @@ submit.addEventListener("click", () => {
 		localStorage.setItem("quizQuestions", questions);
 		localStorage.setItem("optionsPicked", options);
 		window.location="submit.html";
-
-
 	}
 })
 

@@ -6,6 +6,24 @@ body {
   margin-right: 15rem;
 }
 
+/* .side-barl{
+  background-color: #FFFFFF;
+  z-index: -1;
+  height: 62rem;
+  position: relative;
+  right: 75rem;
+  bottom: 20rem;
+}
+
+.side-barr{
+  background-color: #FFFFFF;
+  z-index: -1;
+  height: 62rem;
+  position: relative;
+  right: -75rem;
+  bottom: 80rem;
+} */
+
 /* TEXT COLOR */
 .txt {
   color: #FFFFFF;
@@ -64,6 +82,7 @@ body {
   font-size: 2.7rem;
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
 
 .first {
@@ -102,7 +121,7 @@ body {
 
 .next {
   position: absolute;
-  right: 10rem;
+  right: 14rem;
   top: 25rem;
 }
 
@@ -118,7 +137,7 @@ body {
   border-style: solid;
   border-radius: 12px;
   position: absolute;
-  left: 32rem;
+  left: 43rem;
   top: 50rem;
   font-size: 3.5rem;
   text-decoration: none;
@@ -127,4 +146,5 @@ body {
   font-size: 3.7rem;
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
