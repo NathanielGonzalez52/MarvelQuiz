@@ -553,20 +553,28 @@ function randNum() {
 	var randValue = Math.random();
 	var randQues = Math.floor(randValue * (Questions.length))
 	return randQues;
-
 }
 
 const nums = [];
 
+for (i=0; i<10; i++) {
+	quesNum = randNum();
+	while (nums.includes(quesNum)) {
+		quesNum = randNum()
+	}
+	nums.push(quesNum);
+}
+console.log(nums);
 
 // first random question
 if (start) {
 	var id = 1;
+	console.log("activated");
 	title.innerText = "Question " + Number(id);
-	var firstQuestion = randNum();
-	nums.push(firstQuestion);
-	iterate(firstQuestion.toString());
-
+	// var firstQuestion = randNum();
+	// nums.push(firstQuestion);
+	iterate(nums[(id-1).toString()]);
+	// console.log(nums[id-1]);
 }
 
 // Next button and method
@@ -575,105 +583,56 @@ const previous = document.getElementsByClassName('previous')[0];
 const submit = document.getElementsByClassName('submit')[0];
 submit.hidden = true;
 
-var id = 1;
-
-
 var pClicked = false;
 var prevClicked = 0;
 previous.hidden = true;
 
 next.addEventListener("click", () => {
-	if (start && selected != "") {
+	if (selected=="") {
+		window.alert("Whoops! Looks like you forgot to select an answer");
+		return "";
+	}
+
+	// MAKES QUIZ TEN QUESTIONS
+	if (id <= nums.length) {
 		start = false;
-	}
-	else if (selected == "") {
-		window.alert("Please select an answer.");
-		return ""
-	}
-	option.push(picked);
-	answers.push(selected);
-	previous.disabled = false;
-	previous.hidden = false;
-	defaultColors();
+		id++;
 
-	if (prevClicked > 0) {
-		prevClicked--;
-		console.log(prevClicked);
-		title.innerText = "Question " + Number(id-prevClicked);
-		iterate(nums[nums.length-(1+prevClicked)]);
-		if (reverseString(title.innerText)[0] == '0') {
-			next.hidden = true;
-			submit.hidden = false;
-		}
+		iterate(nums[(id-1)].toString());
+		title.innerText = "Question " + id;
+		previous.hidden = false;
+		defaultColors();
+		option.push(picked);
+		answers.push(selected);
 	}
-		else if (id <= Questions.length) {
-			id++;
-			var nextQuestion = randNum();
+	// INDICATES USER THAT QUIZ IS COMPLETED
+	if (id==10) {
+		submit.hidden = false;
+		next.hidden = true;
+	}
 
-			while (nums.includes(nextQuestion)) {
-					nextQuestion = randNum();
-			}
-				nums.push(nextQuestion);
-				title.innerText = "Question " + Number(id);
-				iterate(nextQuestion.toString());
-				if (reverseString(title.innerText)[0] == '0') {
-					next.hidden = true;
-					submit.hidden = false;
-		}
-	}
+	console.log(answers);
 	selected = "";
 })
-
-var currId = nums[nums.length-1];
 
 // FINDS PREVIOUS BUTTON
 // ADD FUNCTIONALITY TO PREVIOUS BUTTON
 previous.addEventListener("click", () => {
 	defaultColors();
 	next.hidden = false;
-	submit.hidden = true;
-	var prevId = nums[nums.length-(1+prevClicked)];
-	var backWards = id-prevClicked;
-	var currId = nums[nums.length-1];
-	if (id==1 || backWards<1) {
-		previous.disabled = true;
-	}
-	else {
-		prevClicked++;
-		console.log("else block");
-		previous.disabled = false;
-		if (prevClicked > 0) {
-			var prevId = nums[nums.length-(1+prevClicked)];
-			var backWards = id-prevClicked;
-		}
-	try {
-		console.log(prevClicked);
-		var prevId = nums[nums.length-(1+prevClicked)];
-		var backWards = id-prevClicked;
-		title.innerText = "Question " + Number(backWards);
-		iterate(nums[nums.length-(1+prevClicked)]);
-		answers.pop();
-		option.pop();
-		console.log("try block");
-		if (reverseString(title.innerText)[0] == '1') {
-			previous.hidden = true;
-		}
-	}
-	catch(err) {
-		console.log(err);
+	answers.pop();
+	option.pop();
+	id--;
+	if (id==1) {
 		previous.hidden = true;
-		prevClicked--;
-		title.innerText = "Question " + Number(1);
-		iterate(currId);
-		console.log("catch block");
 	}
-}
+	iterate(nums[(id-1)].toString());
+	title.innerText = "Question " + id;
 })
 
 var choices = "";
 var questions = "";
 var options = "";
-var answerKey = "";
 
 const line = document.getElementsByClassName('line')[0];
 submit.addEventListener("click", () => {

@@ -14,35 +14,53 @@ var correctAnswer = key.split(" ");
 
 
 function notCorrect(x) {
-  // var op1 = document.getElementsByClassName("btn" + String(button));
-  // var op2 = document.getElementsByClassName("btn" + String((button+1)));
-  // var op3 = document.getElementsByClassName("btn" + String((button+2)));
-  // var op4 = document.getElementsByClassName("btn" + String((button+3)));
   x.style.textDecoration = "line-through";
 }
 
-function optionChosen(x) {
-	var first = false;
-	var second = false;
-	var third = false;
-	var fourth = false;
-	if (picked[x] == "op1") {
-		first = true;
-		return "first";
-	}
-	if (picked[x] == "op2") {
-		second = true;
-		return "second";
-	}
-	if (picked[x] == "op3") {
-		third = true;
-		return "third";
-	}
-	if (picked[x] == "op4") {
-		fourth = true;
-		return "fourth";
-	}
-}
+
+
+// function rightAnswer() {
+//   if
+// }
+// function optionChosen(x) {
+// 	var first = false;
+// 	var second = false;
+// 	var third = false;
+// 	var fourth = false;
+// 	if (picked[x] == "op1") {
+// 		first = true;
+// 		return "first";
+// 	}
+// 	if (picked[x] == "op2") {
+// 		second = true;
+// 		return "second";
+// 	}
+// 	if (picked[x] == "op3") {
+// 		third = true;
+// 		return "third";
+// 	}
+// 	if (picked[x] == "op4") {
+// 		fourth = true;
+// 		return "fourth";
+// 	}
+// }
+
+// function rightAnswer(x) {
+//   optionChosen(x);
+//   console.log(optionChosen(x));
+//   if (optionChosen(x) == "first") {
+//     op1[0].style.backgroundColor == "green";
+//   }
+//   if (optionChosen(x) == "second") {
+//     op2[0].style.backgroundColor == "green";
+//   }
+//   if (optionChosen(x) == "third") {
+//     op3[0].style.backgroundColor == "green";
+//   }
+//   if (optionChosen(x) == "fourth") {
+//     op4[0].style.backgroundColor == "green";
+//   }
+// }
 // gets rid of empty space at the end of the string
 answers.pop();
 quizQuestions.pop();
@@ -57,7 +75,7 @@ var score = 0;
 const Questions = [{
 		id: 0,
 		q: 'Which character said, "I never said you were a superhero"?',
-		pic: "images\Leslie_bibb.webp",
+		pic: "images/Leslie_bibb.webp",
 		a: [{ text: "Obediah Stane", isCorrect: false },
 			{ text: "Pepper Potts", isCorrect: false },
 			{ text: "Christine Everheart", isCorrect: true },
@@ -299,7 +317,7 @@ const Questions = [{
 	{
 		id: 24,
 		q: "What is the name of the scientist that helps Steve become Captain America?",
-		pic: "images/Abraham_Erskine.jpg",
+		pic: "images/Abraham_Erskine.webp",
 		a: [{ text: "Howard Stark", isCorrect: false },
 			{ text: "Dr. Emil Hamilton", isCorrect: false },
 			{ text: "Johann Schmidt", isCorrect: false },
@@ -369,7 +387,7 @@ const Questions = [{
 	{
 		id: 31,
 		q: "What is the title of Flash's book in Spiderman: No Way Home?",
-		pic: "images/Flash_Thompson.jpg",
+		pic: "images/flash.avif",
 		a: [{ text: "Spideys's Best Friend", isCorrect: false },
 			{ text: "Spider-Man's Super Friend", isCorrect: false },
 			{ text: "Flashpoint", isCorrect: true },
@@ -379,7 +397,7 @@ const Questions = [{
 	{
 		id: 32,
 		q: "Where are Peter and Quentin when Quentin obtains EDITH?",
-		pic: "images/spidey_mysterio.jpg",
+		pic: "images/spidey_mysterio.webp",
 		a: [{ text: "Abandoned Building", isCorrect: false },
 			{ text: "A Bar", isCorrect: true },
 			{ text: "A Restaurant", isCorrect: false },
@@ -399,13 +417,74 @@ const Questions = [{
 	{
 		id: 34,
 		q: "Which one of these was NOT part of Scott Lang's house arrest montage?",
-		pic: "images/paul_rudd_house_arrest.jpg",
+		pic: "images/house_search.webp",
 		a: [{ text: "Karoke", isCorrect: false },
 			{ text: "Napping", isCorrect: true },
 			{ text: "Drumming", isCorrect: false },
 			{ text: "Reading", isCorrect: false }
 		]
+	},
+	{
+		id: 35,
+		q: "In Shang-Chi, Trevor claims he was able to avoid execution by performing a monolouge from what play?",
+		pic: "",
+		a: [{ text: "MacBeth", isCorrect: false },
+			{ text: "The Whimiscal Bard", isCorrect: true },
+			{ text: "Midsummer Night", isCorrect: false },
+			{ text: "Hamlet", isCorrect: false }
+		]
+	},
+	{
+		id: 36,
+		q: "What was the name of the club that Steve was supposed to meet Peggy for a dance?",
+		pic: "",
+		a: [{ text: "The Stork Club", isCorrect: false },
+			{ text: "Bandstand", isCorrect: true },
+			{ text: "The Icerberg Lounge", isCorrect: false },
+			{ text: "The Pigeonhole", isCorrect: false }
+		]
+	},
+	{
+		id: 37,
+		q: "What is Danver's nickname for Monica Rambeau?",
+		pic: "",
+		a: [{ text: "Lieutenant Problem", isCorrect: false },
+			{ text: "Sargent Trouble", isCorrect: true },
+			{ text: "Captain Photon", isCorrect: false },
+			{ text: "Lieutenant Trouble", isCorrect: false }
+		]
+	},
+	{
+		id: 38,
+		q: "What is the name of the song that Peggy and Steve dance to in the last scene of Endgame?",
+		pic: "",
+		a: [{ text: "I've Missed You", isCorrect: false },
+			{ text: "You Wonderful You", isCorrect: true },
+			{ text: "What a Wonderful World", isCorrect: false },
+			{ text: "It's Been a Long, Long Time", isCorrect: false }
+		]
+	},
+	{
+		id: 39,
+		q: "How many pHds does Bruce Banner have?",
+		pic: "",
+		a: [{ text: "Five", isCorrect: false },
+			{ text: "Two", isCorrect: true },
+			{ text: "Three", isCorrect: false },
+			{ text: "Seven", isCorrect: false }
+		]
 	}
+
+	// {
+	// 	id:,
+	// 	q: "?",
+	// 	pic: "",
+	// 	a: [{ text: "", isCorrect: false },
+	// 		{ text: "", isCorrect: true },
+	// 		{ text: "", isCorrect: false },
+	// 		{ text: "", isCorrect: false }
+	// 	]
+	// }
 
 ]
 
@@ -436,87 +515,39 @@ for (i=0; i<quizQuestions.length; i++) {
 	op3[0].value = Questions[quizQuestions[i]].a[2].isCorrect;
 	op4[0].value = Questions[quizQuestions[i]].a[3].isCorrect;
 
-	if (op1[0].value == "true") {
-    console.log(answers[i]);
-	    op1[0].style.backgroundColor = "green";
-      op2[0].style.textDecoration = "line-through";
-      op3[0].style.textDecoration = "line-through";
-      op4[0].style.textDecoration = "line-through";
-	    if (answers[i] != "true") {
-				if (optionChosen(i)  == "second") {
-					op2[0].style.backgroundColor = "gray";
-				}
-				if (optionChosen(i)  == "third") {
-					op3[0].style.backgroundColor = "gray";
-				}
-				if (optionChosen(i)  == "fourth") {
-					op4[0].style.backgroundColor = "gray";
-				}
+  if (op1[0].value == "true") {
+    op1[0].style.backgroundColor = "green";
+  }
+  if (op2[0].value == "true") {
+    op2[0].style.backgroundColor = "green";
+  }
+  if (op3[0].value == "true") {
+    op3[0].style.backgroundColor = "green";
+  }
+  if (op4[0].value == "true") {
+    op4[0].style.backgroundColor = "green";
+  }
 
-			}
-
-	  }
-	if (op2[0].value == "true") {
-    console.log(answers[i]);
-	   op2[0].style.backgroundColor = "green";
-     op1[0].style.textDecoration = "line-through";
-     op3[0].style.textDecoration = "line-through";
-     op4[0].style.textDecoration = "line-through";
-		 if (answers[i] != "true") {
-			 if (optionChosen(i)  == "first") {
-				 op1[0].style.backgroundColor = "gray";
-			 }
-			 if (optionChosen(i)  == "third") {
-				 op3[0].style.backgroundColor = "gray";
-			 }
-			 if (optionChosen(i)  == "fourth") {
-				 op4[0].style.backgroundColor = "gray";
-			 }
-		 }
-
-	  }
-	if (op3[0].value == "true") {
-    console.log(answers[i]);
-	   op3[0].style.backgroundColor = "green";
-     op1[0].style.textDecoration = "line-through";
-     op2[0].style.textDecoration = "line-through";
-     op4[0].style.textDecoration = "line-through";
-
-		 if (answers[i] != "true") {
-			 if (optionChosen(i)  == "first") {
-				 op1[0].style.backgroundColor = "gray";
-			 }
-			 if (optionChosen(i)  == "second") {
-				 op2[0].style.backgroundColor = "gray";
-			 }
-			 if (optionChosen(i)  == "fourth") {
-				 op4[0].style.backgroundColor = "gray";
-			 }
-		 }
-
-	  }
-	if (op4[0].value == "true") {
-
-    console.log(answers[i]);
-	  op4[0].style.backgroundColor = "green";
+  if (picked[i] == "op1" && op1[0].value != "true") {
+    op1[0].style.backgroundColor = "gray";
     op1[0].style.textDecoration = "line-through";
-    op2[0].style.textDecoration = "line-through";
-    op3[0].style.textDecoration = "line-through";
-		if (answers[i] != op1[0].value) {
-		 if (optionChosen(i)  == "first") {
-			 op1[0].style.backgroundColor = "gray";
-     }
-     if (optionChosen(i)  == "second") {
-				op2[0].style.backgroundColor = "gray";
-      }
-			 if (optionChosen(i)  == "third") {
-				 op3[0].style.backgroundColor = "gray";
-			 }
-		 }
+  }
 
-	  }
+  if (picked[i] == "op2" && op2[0].value != "true") {
+    op2[0].style.backgroundColor = "gray";
+    op2[0].style.textDecoration = "line-through";
+  }
+  if (picked[i] == "op3" && op3[0].value != "true") {
+    op3[0].style.backgroundColor = "gray";
+    op3[0].style.textDecoration = "line-through";
+  }
+  if (picked[i] == "op4" && op4[0].value != "true") {
+    op4[0].style.backgroundColor = "gray";
+    op4[0].style.textDecoration = "line-through";
+  }
+
 	button+=3;
-	// console.log("hello");
+
 }
 
 for (x=0; x<answers.length; x++) {
@@ -530,7 +561,7 @@ console.log(score);
 var message = document.getElementsByClassName("playerMessage")[0];
 
 if (score < 5){
-  message.innerText =  "Do you even watch the movies? \nYou got " + score + " correct."
+  message.innerText =  "Do you even watch the movies? \nYou only got " + score + " correct."
 }
 
 else if (score < 7) {
