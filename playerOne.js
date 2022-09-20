@@ -565,8 +565,9 @@ playerGreeting.innerText = 'Please press "Start" when you are ready, ' + playerO
 
 const ready = document.getElementsByClassName("greeting")[0];
 const gameStart = document.getElementsByClassName("game");
-ready.addEventListener("click", () => {
 
+ready.addEventListener("click", () => {
+	ready.hidden = true;
 	playerGreeting.style.visibility = "hidden";
 	for (i=0;i<=gameStart.length;i++) {
 		// console.log(gameStart[i]);
