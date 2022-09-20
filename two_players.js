@@ -17,8 +17,9 @@ ready.addEventListener("click", () => {
     alert("Please enter names for both players.")
   }
   else {
-    console.log(playerOne);
-    console.log(playerTwo);
+    localStorage.getItem("playerOne", playerOne);
+    localStorage.getItem("playerTwo", playerTwo);
+    window.location = "playerOne.html";
   }
 
 })

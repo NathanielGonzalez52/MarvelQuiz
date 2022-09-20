@@ -479,7 +479,6 @@ const Questions = [{
 
 ]
 
-
 // Set start
 var start = true;
 // Iterate
@@ -555,33 +554,6 @@ function randNum() {
 	var randQues = Math.floor(randValue * (Questions.length))
 	return randQues;
 }
-
-
-var playerOne = localStorage.getItem("playerOne");
-
-const playerGreeting = document.getElementsByClassName("player-greeting")[0];
-
-playerGreeting.innerText = 'Please press "Start" when you are ready, ' + playerOne;
-
-const ready = document.getElementsByClassName("greeting")[0];
-const gameStart = document.getElementsByClassName("game");
-ready.addEventListener("click", () => {
-
-	playerGreeting.style.visibility = "hidden";
-	for (i=0;i<=gameStart.length;i++) {
-		// console.log(gameStart[i]);
-		try{
-			gameStart[i].style.visibility = "visible";
-		}
-		catch {
-			console.log("Not Necessary");
-		}
-	}
-
-})
-
-
-
 
 const nums = [];
 
@@ -662,6 +634,7 @@ var choices = "";
 var questions = "";
 var options = "";
 
+const line = document.getElementsByClassName('line')[0];
 submit.addEventListener("click", () => {
 	if (selected == "") {
 		window.alert("Please select an answer.");
@@ -684,10 +657,10 @@ submit.addEventListener("click", () => {
 		console.log(choices);
 		console.log(questions);
 		console.log(options);
-		localStorage.setItem("playerOneChoices", choices);
+		localStorage.setItem("playerTwoChoices", choices);
 		localStorage.setItem("quizQuestions", questions);
-		localStorage.setItem("playerOneOptions", options);
-		window.location="playerTwo.html";
+		localStorage.setItem("playerTwoOptions", options);
+		window.location="compare.html";
 	}
 })
 
