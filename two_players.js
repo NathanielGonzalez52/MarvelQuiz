@@ -17,9 +17,12 @@ ready.addEventListener("click", () => {
     alert("Please enter names for both players.")
   }
   else {
-    localStorage.getItem("playerOne", playerOne);
-    localStorage.getItem("playerTwo", playerTwo);
+    console.log(playerOne);
+    console.log(playerTwo);
+    localStorage.setItem("playerOne", playerOne);
+    localStorage.setItem("playerTwo", playerTwo);
     window.location = "playerOne.html";
+
   }
 
 })

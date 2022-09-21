@@ -1,5 +1,6 @@
 var selected = "";
 var correctAnswer = "";
+var score = 0;
 const answers = [];
 const option = [];
 
@@ -685,7 +686,14 @@ submit.addEventListener("click", () => {
 		console.log(choices);
 		console.log(questions);
 		console.log(options);
-		localStorage.setItem("playerOneChoices", choices);
+		
+		localStorage.setItem("score", score);
+		for (x=0; x<answers.length; x++) {
+			if (answers[x] == "true") {
+				score++;
+			}
+		}
+		// localStorage.setItem("playerOneChoices", choices);
 		localStorage.setItem("quizQuestions", questions);
 		localStorage.setItem("playerOneOptions", options);
 		window.location="playerTwo.html";
