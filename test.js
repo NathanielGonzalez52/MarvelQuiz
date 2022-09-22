@@ -479,6 +479,8 @@ const Questions = [{
 
 ]
 
+localStorage.setItem("questionBank", JSON.stringify(Questions));
+
 // Set start
 var start = true;
 // Iterate
@@ -660,6 +662,7 @@ submit.addEventListener("click", () => {
 		localStorage.setItem("playerChoices", choices);
 		localStorage.setItem("quizQuestions", questions);
 		localStorage.setItem("optionsPicked", options);
+
 		window.location="submit.html";
 	}
 })
