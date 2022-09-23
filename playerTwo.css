@@ -6,23 +6,10 @@ body {
   margin-right: 15rem;
 }
 
-/* .side-barl{
-  background-color: #FFFFFF;
-  z-index: -1;
-  height: 62rem;
-  position: relative;
-  right: 75rem;
-  bottom: 20rem;
+.title {
+  text-decoration: none;
+  color: inherit;
 }
-
-.side-barr{
-  background-color: #FFFFFF;
-  z-index: -1;
-  height: 62rem;
-  position: relative;
-  right: -75rem;
-  bottom: 80rem;
-} */
 
 /* TEXT COLOR */
 .txt {

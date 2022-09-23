@@ -7,6 +7,11 @@ body {
   margin-top: 10rem;
 }
 
+.title {
+  text-decoration: none;
+  color: inherit;
+}
+
 .player-one {
   padding-bottom: 2rem;
 }
