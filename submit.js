@@ -17,50 +17,6 @@ function notCorrect(x) {
   x.style.textDecoration = "line-through";
 }
 
-
-
-// function rightAnswer() {
-//   if
-// }
-// function optionChosen(x) {
-// 	var first = false;
-// 	var second = false;
-// 	var third = false;
-// 	var fourth = false;
-// 	if (picked[x] == "op1") {
-// 		first = true;
-// 		return "first";
-// 	}
-// 	if (picked[x] == "op2") {
-// 		second = true;
-// 		return "second";
-// 	}
-// 	if (picked[x] == "op3") {
-// 		third = true;
-// 		return "third";
-// 	}
-// 	if (picked[x] == "op4") {
-// 		fourth = true;
-// 		return "fourth";
-// 	}
-// }
-
-// function rightAnswer(x) {
-//   optionChosen(x);
-//   console.log(optionChosen(x));
-//   if (optionChosen(x) == "first") {
-//     op1[0].style.backgroundColor == "green";
-//   }
-//   if (optionChosen(x) == "second") {
-//     op2[0].style.backgroundColor == "green";
-//   }
-//   if (optionChosen(x) == "third") {
-//     op3[0].style.backgroundColor == "green";
-//   }
-//   if (optionChosen(x) == "fourth") {
-//     op4[0].style.backgroundColor == "green";
-//   }
-// }
 // gets rid of empty space at the end of the string
 answers.pop();
 quizQuestions.pop();

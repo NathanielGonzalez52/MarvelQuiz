@@ -6,6 +6,11 @@ body {
   margin-right: 15rem;
 }
 
+.title {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* .side-barl{
   background-color: #FFFFFF;
   z-index: -1;

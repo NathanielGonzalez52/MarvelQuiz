@@ -23,4 +23,10 @@ else {
 greeting.innerText = playerOne + " got " + oneScore + " questions correct. \n " + playerTwo +
 " got " + twoScore + " questions correct."
 
-winner.innerText = "Congratulations, " + winningPlayer + "!\n You are the more loyal fan!"
+if (!tie) {
+  winner.innerText = "Congratulations, " + winningPlayer + "!\n You are the more loyal fan!"
+}
+
+else {
+  winner.innerText = "Wow! You are even! \nGuess you'll have to try again, true-believers..."
+}

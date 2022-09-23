@@ -168,19 +168,21 @@ ready.addEventListener("click", () => {
 
 })
 
+// const nums = [];
+//
+// for (i=0; i<10; i++) {
+// 	quesNum = randNum();
+// 	while (nums.includes(quesNum)) {
+// 		quesNum = randNum()
+// 	}
+// 	nums.push(quesNum);
+// }
 
+var questions = localStorage.getItem("quizQuestions");
 
+const nums = questions.split(" ");
 
-const nums = [];
-
-for (i=0; i<10; i++) {
-	quesNum = randNum();
-	while (nums.includes(quesNum)) {
-		quesNum = randNum()
-	}
-	nums.push(quesNum);
-}
-console.log(nums);
+nums.pop();
 
 // first random question
 if (start) {

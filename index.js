@@ -418,7 +418,7 @@ const Questions = [{
 	{
 		id: 35,
 		q: "In Shang-Chi, Trevor claims he was able to avoid execution by performing a monolouge from what play?",
-		pic: "",
+		pic: "images/trevor.jpg",
 		a: [{ text: "MacBeth", isCorrect: false },
 			{ text: "The Whimiscal Bard", isCorrect: true },
 			{ text: "Midsummer Night", isCorrect: false },
@@ -428,7 +428,7 @@ const Questions = [{
 	{
 		id: 36,
 		q: "What was the name of the club that Steve was supposed to meet Peggy for a dance?",
-		pic: "",
+		pic: "images/steve_peggy.webp",
 		a: [{ text: "The Stork Club", isCorrect: false },
 			{ text: "Bandstand", isCorrect: true },
 			{ text: "The Icerberg Lounge", isCorrect: false },
@@ -438,7 +438,7 @@ const Questions = [{
 	{
 		id: 37,
 		q: "What is Danver's nickname for Monica Rambeau?",
-		pic: "",
+		pic: "images/lieu_trouble.webp",
 		a: [{ text: "Lieutenant Problem", isCorrect: false },
 			{ text: "Sargent Trouble", isCorrect: true },
 			{ text: "Captain Photon", isCorrect: false },
@@ -448,7 +448,7 @@ const Questions = [{
 	{
 		id: 38,
 		q: "What is the name of the song that Peggy and Steve dance to in the last scene of Endgame?",
-		pic: "",
+		pic: "images/steve-and-carter.jpg",
 		a: [{ text: "I've Missed You", isCorrect: false },
 			{ text: "You Wonderful You", isCorrect: true },
 			{ text: "What a Wonderful World", isCorrect: false },
@@ -458,24 +458,95 @@ const Questions = [{
 	{
 		id: 39,
 		q: "How many pHds does Bruce Banner have?",
-		pic: "",
+		pic: "images/bruce_phds.jpg",
 		a: [{ text: "Five", isCorrect: false },
 			{ text: "Two", isCorrect: true },
 			{ text: "Three", isCorrect: false },
 			{ text: "Seven", isCorrect: false }
 		]
-	}
+	},
 
-	// {
-	// 	id:,
-	// 	q: "?",
-	// 	pic: "",
-	// 	a: [{ text: "", isCorrect: false },
-	// 		{ text: "", isCorrect: true },
-	// 		{ text: "", isCorrect: false },
-	// 		{ text: "", isCorrect: false }
-	// 	]
-	// }
+	{
+		id: 40,
+		q: "In Spider-Man: Far From Home, what is the first city they vist?",
+		pic: "images/spidey_venice.jpg",
+		a: [{ text: "Paris", isCorrect: false },
+			{ text: "Venice", isCorrect: true },
+			{ text: "Rome", isCorrect: false },
+			{ text: "Berlin", isCorrect: false }
+		]
+	},
+
+	{
+		id: 41,
+		q: "What name does Stark use to summon the Hulkbuster?",
+		pic: "images/veronica.jpg",
+		a: [{ text: "Charlie", isCorrect: false },
+			{ text: "Friday", isCorrect: false },
+			{ text: "Edith", isCorrect: false },
+			{ text: "Veronica", isCorrect: true }
+		]
+	},
+	{
+		id: 42,
+		q: "In the opening of The Guardians of the Galaxy, Star-Lord retrieves the power stone on what planet?",
+		pic: "images/morag.jpg",
+		a: [{ text: "Vormir", isCorrect: false },
+			{ text: "Hoth", isCorrect: false },
+			{ text: "Nidavellir", isCorrect: false },
+			{ text: "Morag", isCorrect: true }
+		]
+	},
+	{
+		id: 43,
+		q: "In Infinity War, Dr.Strange admonishes Stark for leaning on this item to stretch. What was it?",
+		pic: "images/cauldron.webp",
+		a: [{ text: "The Eye of Agamatto", isCorrect: false },
+			{ text: "The Sacred Bookshelf", isCorrect: false },
+			{ text: "Cauldron of the Cosmos", isCorrect: true },
+			{ text: "Stairs of Myrra", isCorrect: false }
+		]
+	},
+	{
+		id: 44,
+		q: "What is the name of the Ben and Jerry's Iron Man ice cream flavor mentioned in Infinity War?",
+		pic: "images/ice_cream.jpg",
+		a: [{ text: "Stark Razing Hazelnuts", isCorrect: true },
+			{ text: "Iron Pistachios", isCorrect: false },
+			{ text: "Tony's Rocky Roadster", isCorrect: false },
+			{ text: "Red and Gold Chunks", isCorrect: false }
+		]
+	},
+	{
+		id: 45,
+		q: "In Endgame, what do they name the mission to obtain the Infinity Stones?",
+		pic: "images/heist.jpg",
+		a: [{ text: "The Last Effort", isCorrect: false },
+			{ text: "Jewel Thieves", isCorrect: false },
+			{ text: "Time Heist", isCorrect: true },
+			{ text: "Blast to the Past", isCorrect: false }
+		]
+	},
+	{
+		id: 46,
+		q: "In Thor Ragnarok, what is the name of the care home Loki left Odin at?",
+		pic: "images/shady_acres.webp",
+		a: [{ text: "West Wing", isCorrect: false },
+			{ text: "Green Acres", isCorrect: false },
+			{ text: "Shady Acres", isCorrect: true },
+			{ text: "Heaven's Doorknob", isCorrect: false }
+		]
+	},
+	{
+		id: 47,
+		q: "What is the name of the street that Dr. Strange lives on?",
+		pic: "images/dr.strange_address.jpg",
+		a: [{ text: "Bleecker", isCorrect: true },
+			{ text: "Sullivan", isCorrect: false },
+			{ text: "Broadway", isCorrect: false },
+			{ text: "Ninth", isCorrect: false }
+		]
+	},
 
 ]
 
@@ -636,7 +707,6 @@ var choices = "";
 var questions = "";
 var options = "";
 
-const line = document.getElementsByClassName('line')[0];
 submit.addEventListener("click", () => {
 	if (selected == "") {
 		window.alert("Please select an answer.");
