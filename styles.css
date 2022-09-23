@@ -11,24 +11,6 @@ body {
   color: inherit;
 }
 
-/* .side-barl{
-  background-color: #FFFFFF;
-  z-index: -1;
-  height: 62rem;
-  position: relative;
-  right: 75rem;
-  bottom: 20rem;
-}
-
-.side-barr{
-  background-color: #FFFFFF;
-  z-index: -1;
-  height: 62rem;
-  position: relative;
-  right: -75rem;
-  bottom: 80rem;
-} */
-
 /* TEXT COLOR */
 .txt {
   color: #FFFFFF;
