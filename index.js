@@ -65,12 +65,12 @@ function clickedOn (x) {
 
 const Questions = [{
 		id: 0,
-		q: 'Which character said, "I never said you were a superhero"?',
-		pic: "images/Leslie_bibb.webp",
-		a: [{ text: "Obediah Stane", isCorrect: false },
-			{ text: "Pepper Potts", isCorrect: false },
-			{ text: "Christine Everheart", isCorrect: true },
-			{ text: "Vicki Vale", isCorrect: false }
+		q: "What is the name of the scientist that builds Vision's body?",
+		pic: "images/helen.avif",
+		a: [{ text: "Dr. Amanda Ho", isCorrect: false },
+			{ text: "Dr. Tuyen Le", isCorrect: false },
+			{ text: "Dr. Michelle Lee", isCorrect: false },
+			{ text: "Dr. Helen Cho", isCorrect: true }
 		]
 
 	},
