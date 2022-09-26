@@ -115,5 +115,12 @@ else if (score >= 8) {
   message.innerText = "Excelsior! \nYou got " + score + " correct!";
 }
 
+const playAgain = document.getElementsByClassName("play-again")[0];
+
+playAgain.addEventListener("click", () => {
+  window.location = "welcome.html";
+})
+
+
 // var message = document.getElementsByClassName("playerMessage")[0];
 // message.innerText = "Excelsior! \nYou got " + score + " correct!";

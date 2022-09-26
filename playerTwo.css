@@ -39,11 +39,11 @@ body {
 } */
 
 .ques-pics {
-  width: 38%;
-  padding-bottom: 1.5rem;
+  width: 37%;
+  padding-top: 1.5rem;
   position: absolute;
   left: 28rem;
-  top: 18.5rem;
+  top: 17.5rem;
   max-height: 70%;
 }
 /* Style for title */
@@ -77,13 +77,13 @@ body {
   position: absolute;
   white-space: normal;
   max-width: 40%;
-  top: 40rem;
+  top: 42rem;
 }
 
 
 .second {
   position: absolute;
-  top: 45rem;
+  top: 47rem;
   white-space: normal;
   max-width: 40%;
 }
@@ -92,14 +92,14 @@ body {
 .third {
   position: absolute;
   right: 20rem;
-  top: 40rem;
+  top: 42rem;
   white-space: normal;
   max-width: 40%;
 }
 
 .fourth {
   position: absolute;
-  top: 45rem;
+  top: 47rem;
   right: 20rem;
   white-space: normal;
   max-width: 40%;
