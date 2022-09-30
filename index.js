@@ -109,8 +109,8 @@ const Questions = [{
 		id: 4,
 		pic: "images/loki_tesseract.jpg",
 		q: "Which movie is the Tessseract first seen on screen?",
-		a: [{ text: "Captain America The First Avenger", isCorrect: false },
-			{ text: "Thor", isCorrect: true },
+		a: [{ text: "Thor", isCorrect: true },
+			{ text: "Captain America The First Avenger", isCorrect: false },
 			{ text: "Thor: The Dark World", isCorrect: false },
 			{ text: "Iron Man 2", isCorrect: false }
 		]
