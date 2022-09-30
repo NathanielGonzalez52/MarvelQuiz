@@ -141,8 +141,8 @@ const Questions = [{
 		pic: "images/stan_lee.jpg",
 		a: [{ text: "Ant-Man", isCorrect: true },
 			{ text: "Spider-Man: Homecoming", isCorrect: false },
-			{ text: "Iron Man 3", isCorrect: false },
-			{ text: "Captain America: The First Avenger", isCorrect: false }
+			{ text: "Captain America: The First Avenger", isCorrect: false },
+			{ text: "Iron Man 3", isCorrect: false }
 		]
 	},
 	{
