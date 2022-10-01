@@ -30,3 +30,9 @@ if (!tie) {
 else {
   winner.innerText = "Wow! You are even! \nGuess you'll have to try again, true-believers..."
 }
+
+const playAgain = document.getElementsByClassName("play-again")[0];
+
+playAgain.addEventListener("click", () => {
+  window.location = "welcome.html";
+})

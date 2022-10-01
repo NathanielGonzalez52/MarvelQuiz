@@ -27,3 +27,31 @@ body {
   font-size: 3rem;
   color: #D3AF37
 }
+
+.option {
+  background-color: #ED1D24;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.play-again {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.again {
+  background-color: #ED1D24;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-radius: 12px;
+  position: relative;
+  font-size: 3.5rem;
+}
+.again:hover {
+  font-size: 3.7rem;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
