@@ -419,8 +419,8 @@ const Questions = [{
 		id: 35,
 		q: "In Shang-Chi, Trevor claims he was able to avoid execution by performing a monolouge from what play?",
 		pic: "images/trevor.jpg",
-		a: [{ text: "MacBeth", isCorrect: false },
-			{ text: "The Whimiscal Bard", isCorrect: true },
+		a: [{ text: "MacBeth", isCorrect: true },
+			{ text: "The Whimiscal Bard", isCorrect: false },
 			{ text: "Midsummer Night", isCorrect: false },
 			{ text: "Hamlet", isCorrect: false }
 		]
@@ -429,8 +429,8 @@ const Questions = [{
 		id: 36,
 		q: "What was the name of the club that Steve was supposed to meet Peggy for a dance?",
 		pic: "images/steve_peggy.webp",
-		a: [{ text: "The Stork Club", isCorrect: false },
-			{ text: "Bandstand", isCorrect: true },
+		a: [{ text: "The Stork Club", isCorrect: true },
+			{ text: "Bandstand", isCorrect: false },
 			{ text: "The Icerberg Lounge", isCorrect: false },
 			{ text: "The Pigeonhole", isCorrect: false }
 		]
@@ -440,9 +440,9 @@ const Questions = [{
 		q: "What is Danver's nickname for Monica Rambeau?",
 		pic: "images/lieu_trouble.webp",
 		a: [{ text: "Lieutenant Problem", isCorrect: false },
-			{ text: "Sargent Trouble", isCorrect: true },
+			{ text: "Lieutenant Trouble", isCorrect: true },
 			{ text: "Captain Photon", isCorrect: false },
-			{ text: "Lieutenant Trouble", isCorrect: false }
+			{ text: "Miss Issues", isCorrect: false }
 		]
 	},
 	{
@@ -450,9 +450,9 @@ const Questions = [{
 		q: "What is the name of the song that Peggy and Steve dance to in the last scene of Endgame?",
 		pic: "images/steve-and-carter.jpg",
 		a: [{ text: "I've Missed You", isCorrect: false },
-			{ text: "You Wonderful You", isCorrect: true },
-			{ text: "What a Wonderful World", isCorrect: false },
-			{ text: "It's Been a Long, Long Time", isCorrect: false }
+			{ text: "You Wonderful You", isCorrect: false },
+			{ text: "It's Been a Long, Long Time", isCorrect: true },
+			{ text: "What a Wonderful World", isCorrect: false }
 		]
 	},
 	{
@@ -460,9 +460,9 @@ const Questions = [{
 		q: "How many pHds does Bruce Banner have?",
 		pic: "images/bruce_phds.jpg",
 		a: [{ text: "Five", isCorrect: false },
-			{ text: "Two", isCorrect: true },
+			{ text: "Two", isCorrect: false },
 			{ text: "Three", isCorrect: false },
-			{ text: "Seven", isCorrect: false }
+			{ text: "Seven", isCorrect: true }
 		]
 	},
 
@@ -483,8 +483,8 @@ const Questions = [{
 		pic: "images/veronica.jpg",
 		a: [{ text: "Charlie", isCorrect: false },
 			{ text: "Friday", isCorrect: false },
-			{ text: "Edith", isCorrect: false },
-			{ text: "Veronica", isCorrect: true }
+			{ text: "Veronica", isCorrect: true },
+			{ text: "Meridith", isCorrect: false }
 		]
 	},
 	{
