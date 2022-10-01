@@ -160,6 +160,8 @@ ready.addEventListener("click", () => {
 		// console.log(gameStart[i]);
 		try{
 			gameStart[i].style.visibility = "visible";
+			playerGreeting.remove();
+			ready.remove();
 		}
 		catch {
 			console.log("Not Necessary");

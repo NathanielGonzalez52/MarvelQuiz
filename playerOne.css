@@ -39,12 +39,12 @@ body {
 } */
 
 .ques-pics {
-  width: 37%;
-  padding-top: 1.5rem;
+  width: 35%;
+  padding-bottom: 1.5rem;
   position: absolute;
   left: 28rem;
-  top: 17.5rem;
-  max-height: 70%;
+  max-height: 45%;
+  top: 14.2rem;
 }
 /* Style for title */
 #title {
@@ -52,7 +52,7 @@ body {
 }
 /* Style for question */
 #question {
-  font-size:2.5rem;
+  font-size: 1.8rem;
 }
 
 /* BUTTONS  */
@@ -73,38 +73,41 @@ body {
   cursor: pointer;
 }
 
+
 .first {
   position: absolute;
   white-space: normal;
   max-width: 40%;
-  top: 42rem;
+  top: 34rem;
 }
 
 
 .second {
   position: absolute;
-  top: 47rem;
+  top: 39rem;
   white-space: normal;
   max-width: 40%;
+
 }
 
 
 .third {
   position: absolute;
   right: 20rem;
-  top: 42rem;
+  top: 34rem;
   white-space: normal;
   max-width: 40%;
 }
 
 .fourth {
   position: absolute;
-  top: 47rem;
+  top: 39rem;
   right: 20rem;
   white-space: normal;
   max-width: 40%;
   /* margin-top:6.5rem; */
 }
+
 
 
 
@@ -116,7 +119,7 @@ body {
 
 .previous {
   position: absolute;
-  right: 75rem;
+  right: 60rem;
   top: 25rem;
 }
 
@@ -126,11 +129,12 @@ body {
   border-style: solid;
   border-radius: 12px;
   position: absolute;
-  left: 43rem;
-  top: 50rem;
+  left: 39rem;
+  top: 43rem;
   font-size: 3.5rem;
   text-decoration: none;
 }
+
 .submit:hover {
   font-size: 3.7rem;
   color: rgba(255, 255, 255, 1);
