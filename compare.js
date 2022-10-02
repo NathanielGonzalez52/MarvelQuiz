@@ -11,9 +11,12 @@ oneAnswer.innerText = playerOne + "'s answer key";
 twoAnswer.innerText = playerTwo + "'s answer key";
 
 oneAnswer.addEventListener("click", ()=> {
-  
+  window.location = "oneAnswerKey.html";
 })
 
+twoAnswer.addEventListener("click", ()=> {
+  window.location = "twoAnswerKey.html";
+})
 
 var tie = false;
 

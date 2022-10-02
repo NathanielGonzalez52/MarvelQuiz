@@ -3,20 +3,16 @@
 // localStorage.setItem("alter", "Clark Kent");
 // var score = 0;
 
-// localStorage.setItem("oneScore", score);
-localStorage.setItem("twoChoices", choices);
-localStorage.setItem("quizQuestions", questions);
-localStorage.setItem("twoOptions", options);
-var userAnswers = localStorage.getItem("oneChoices");
+playerTwo = localStorage.getItem("playerTwo");
+const playAgain = document.getElementsByClassName("play-again")[0];
+const goBack = document.getElementsByClassName("return")[0];
+var userAnswers = localStorage.getItem("twoChoices");
 var questions = localStorage.getItem("quizQuestions");
-var options = localStorage.getItem("oneOptions");
-// var key = localStorage.getItem("key");
+var options = localStorage.getItem("twoOptions");
 
 var answers = userAnswers.split(" ");
 var quizQuestions = questions.split(" ");
 var picked = options.split(" ");
-var correctAnswer = key.split(" ");
-
 
 function notCorrect(x) {
   x.style.textDecoration = "line-through";
@@ -96,35 +92,13 @@ for (i=0; i<quizQuestions.length; i++) {
 
 }
 
-// for (x=0; x<answers.length; x++) {
-// 	if (answers[x] == "true") {
-// 		score++;
-// 	}
-// }
-// console.log(score);
-// console.log(score);
-//
-// var message = document.getElementsByClassName("playerMessage")[0];
-//
-// if (score < 5){
-//   message.innerText =  "Do you even watch the movies? \nYou only got " + score + " correct."
-// }
-//
-// else if (score < 7) {
-//   message.innerText =  "Not quite Avenger material... \nYou only got " + score + " correct."
-//
-// }
-//
-// else if (score >= 8) {
-//   message.innerText = "Excelsior! \nYou got " + score + " correct!";
-// }
-
-const playAgain = document.getElementsByClassName("play-again")[0];
+var message = document.getElementsByClassName("two")[0];
+message.innerText = playerTwo + "'s Scorecard";
 
 playAgain.addEventListener("click", () => {
   window.location = "welcome.html";
 })
 
-
-// var message = document.getElementsByClassName("playerMessage")[0];
-// message.innerText = "Excelsior! \nYou got " + score + " correct!";
+goBack.addEventListener("click", () => {
+  window.location = "compare.html";
+})
