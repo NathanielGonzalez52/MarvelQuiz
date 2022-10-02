@@ -282,9 +282,9 @@ submit.addEventListener("click", () => {
 		}
 
 		localStorage.setItem("oneScore", score);
-		// localStorage.setItem("playerOneChoices", choices);
+		localStorage.setItem("oneChoices", choices);
 		localStorage.setItem("quizQuestions", questions);
-		localStorage.setItem("playerOneOptions", options);
+		localStorage.setItem("oneOptions", options);
 		window.location="playerTwo.html";
 	}
 })

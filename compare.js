@@ -4,6 +4,17 @@ oneScore = localStorage.getItem("oneScore");
 twoScore = localStorage.getItem("twoScore");
 const greeting = document.getElementsByClassName("playerGreeting")[0];
 const winner = document.getElementsByClassName("winner")[0];
+const oneAnswer = document.getElementsByClassName("oneAnswer")[0];
+const twoAnswer = document.getElementsByClassName("twoAnswer")[0];
+
+oneAnswer.innerText = playerOne + "'s answer key";
+twoAnswer.innerText = playerTwo + "'s answer key";
+
+oneAnswer.addEventListener("click", ()=> {
+  
+})
+
+
 var tie = false;
 
 winningPlayer = "";

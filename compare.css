@@ -13,6 +13,11 @@ body {
   line-height: 4rem;
   font-size: 1.5rem;
 }
+
+.answerKey {
+  text-align: center;
+}
+
 /* TEXT COLOR */
 .txt {
   color: #FFFFFF;
@@ -39,6 +44,15 @@ body {
 .play-again {
   padding-top: 2rem;
   text-align: center;
+}
+.answers {
+  font-size: 1.3rem;
+}
+.answers:hover {
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
 
 .again {

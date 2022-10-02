@@ -283,9 +283,9 @@ submit.addEventListener("click", () => {
     }
 
     localStorage.setItem("twoScore", score);
-		localStorage.setItem("playerTwoChoices", choices);
+		localStorage.setItem("twoChoices", choices);
 		localStorage.setItem("quizQuestions", questions);
-		localStorage.setItem("playerTwoOptions", options);
+		localStorage.setItem("twoOptions", options);
 		window.location="compare.html";
 	}
 })
