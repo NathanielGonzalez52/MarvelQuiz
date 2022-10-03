@@ -1,0 +1,56 @@
+body {
+  background-color: #ED1D24;
+  font-family: 'Bangers', cursive;
+  /* margin-left: 15rem;
+  margin-right: 15rem; */
+  height: 100%;
+}
+
+.txt {
+    font-family: 'Bangers', cursive;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+
+h2 {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.btn-group {
+  text-align: center;
+}
+
+.one {
+  min-width: 5%;
+  min-height: 5%;
+  color: #ED1D24;
+  white-space: normal;
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.two {
+  min-width: 5%;
+  min-height: 5%;
+  color: #ED1D24;
+  white-space: normal;
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.one-player {
+  width: 5%;
+}
+
+.two-players {
+  width: 5%;
+}
