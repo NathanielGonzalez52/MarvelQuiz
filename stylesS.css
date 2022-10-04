@@ -1,10 +1,10 @@
 body {
   background-color: #ED1D24;
   font-family: 'Bangers', cursive;
-  padding-left: 2.5rem;
+  /* padding-left: 2.5rem; */
   margin-top: 6rem;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  /* padding-left: 15rem;
+  padding-right: 15rem; */
   /* margin-left: 15rem;
   margin-right: 15rem; */
 }
@@ -21,7 +21,7 @@ body {
 
 .ques-pics {
   position: relative;
-  left: 8rem;
+  left: 18%;
   width: 65%;
   max-width: 125%;
   max-height: 45%;
