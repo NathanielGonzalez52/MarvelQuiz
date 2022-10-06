@@ -12,17 +12,20 @@ body {
 .title {
   text-decoration: none;
   color: inherit;
+  /* font-size: 33%; */
 }
 
 .txt {
   color: #FFFFFF;
   font-family: 'Bangers', cursive;
+  font-size: 33%;
 }
 
 .ques-pics {
+  /* text-align: center; */
   position: relative;
-  left: 18%;
-  width: 65%;
+  left: 34%;
+  width: 33%;
   max-width: 125%;
   max-height: 45%;
 }
@@ -44,11 +47,10 @@ body {
   border-color: #FFFFFF;
   border-style: solid;
   border-radius: 12px;
-  font-size: 0.9rem;
+  font-size: 25%;
 }
 
 .next {
   position: relative;
-  bottom: 8rem;
-  left: 126%;
+  left: 75%;
 }
